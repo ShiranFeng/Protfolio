@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// Main Sass entry point
+// -----------------------------------------------------------------------------
+
+// 1. Your variable overrides (must come before bootstrap import)
+@import "variables";
+
+// 2. Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Your custom styles
+@import "custom";
+@import "home";
+@import "projects";
+@import "work";
+@import "gallery";
