@@ -1,6 +1,6 @@
 /**
  * Loads shared components (navbar, footer) into any page that has
- * <div id="navbar-placeholder" data-depth="0"></div> and
+ * <div id="header-placeholder" data-depth="0"></div> and
  * <div id="footer-placeholder" data-depth="0"></div>.
  *
  * data-depth = how many folders deep the current page is from the site root.
@@ -24,7 +24,7 @@ function loadComponent(placeholderId, componentPath) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("navbar-placeholder", "components/navbar.html");
+  loadComponent("header-placeholder", "components/header.html");
   loadComponent("footer-placeholder", "components/footer.html");
 
   const yearEl = document.getElementById("year");
