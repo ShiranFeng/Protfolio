@@ -3,8 +3,20 @@
 // Set your own values here BEFORE bootstrap is imported in main.scss
 // -----------------------------------------------------------------------------
 
-// $primary: #000000;
-// $secondary: #6c757d;
-// $font-family-sans-serif: "Your Font", sans-serif;
-// $body-bg: #ffffff;
-// $body-color: #1a1a1a;
+// Brand colors
+$brand-dark:   #0c1821; // primary dark
+$brand-accent: #324a5f; // slate accent
+$brand-bg:     #faf7ee; // background cream
+$brand-text:   #2b2f33; // body text, dark gray (not pure black)
+
+$primary:   $brand-dark;
+$secondary: $brand-accent;
+$body-bg:    $brand-bg;
+$body-color: $brand-text;
+
+// Fonts
+// Heading font: Jersey 25 (loaded via Google Fonts link in each html <head>)
+// Body font: Archivo (loaded via Google Fonts link in each html <head>)
+$font-family-heading: "Jersey 25", sans-serif;
+$font-family-sans-serif: "Archivo", sans-serif;
+$headings-font-family: $font-family-heading;

@@ -3,6 +3,48 @@
 // -----------------------------------------------------------------------------
 
 .site-header {
+  background-color: $brand-bg;
+  font-family: $font-family-sans-serif;
+  padding-block: 0.75rem;
+
+  .navbar-brand {
+    padding: 0;
+  }
+
+  .navbar-brand img {
+    display: block;
+    width: 7.5rem;
+    height: auto;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
+
+  .nav-link {
+    color: $brand-text;
+    font-family: $font-family-heading;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    color: $brand-accent;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-nav {
+      align-items: center;
+    }
+  }
 }
 
 .site-footer {

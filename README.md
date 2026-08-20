@@ -22,14 +22,21 @@ scss/
 
 css/main.css               Compiled output (generated, don't hand-edit)
 
+src/
+  main.ts                    TypeScript source — edit this, not js/main.js
+
 js/
-  main.js                    Loads navbar/footer components, fixes relative paths
+  main.js                    Compiled output of src/main.ts (generated, don't hand-edit)
   vendor/bootstrap.bundle.min.js
 
 components/
   navbar.html, footer.html   Shared nav/footer, injected into every page by main.js
 
-assets/                     Images, fonts, etc. (empty for now)
+assets/                     Images, fonts, favicon.ico, etc.
+
+robots.txt                  Crawler rules — points to sitemap.xml
+sitemap.xml                 Page list for search engines (URLs are placeholders —
+                             update once the final domain/GitHub Pages URL is set)
 ```
 
 ## Adding more project pages
@@ -52,6 +59,23 @@ structure can differ page to page.
    ```
    npm run watch:css
    ```
+
+## Editing scripts (TypeScript)
+
+1. Edit `src/main.ts` (not `js/main.js` — that file is generated).
+2. Compile it:
+   ```
+   npm run build:ts
+   ```
+   or, while actively working:
+   ```
+   npm run watch:ts
+   ```
+3. `npm run build` runs both the Sass and TypeScript builds together.
+
+The compiled `js/main.js` is committed to the repo (no bundler, no `dist/` folder) so
+GitHub Pages can serve it directly — just remember to rebuild before committing
+whenever you change `src/main.ts`.
 
 ## Running locally
 
