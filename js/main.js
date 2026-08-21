@@ -11,10 +11,10 @@
 function loadComponent(placeholderId, componentPath) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder)
-        return;
+        return Promise.resolve();
     const depth = parseInt(placeholder.dataset.depth || "0", 10);
     const root = "../".repeat(depth);
-    fetch(root + componentPath)
+    return fetch(root + componentPath)
         .then((res) => res.text())
         .then((html) => {
         placeholder.innerHTML = html.replaceAll("__ROOT__", root);
@@ -23,8 +23,9 @@ function loadComponent(placeholderId, componentPath) {
 }
 document.addEventListener("DOMContentLoaded", () => {
     loadComponent("navbar-placeholder", "components/navbar.html");
-    loadComponent("footer-placeholder", "components/footer.html");
-    const yearEl = document.getElementById("year");
-    if (yearEl)
-        yearEl.textContent = new Date().getFullYear().toString();
+    loadComponent("footer-placeholder", "components/footer.html").then(() => {
+        const yearEl = document.getElementById("year");
+        if (yearEl)
+            yearEl.textContent = new Date().getFullYear().toString();
+    });
 });

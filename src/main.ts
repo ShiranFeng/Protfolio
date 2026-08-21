@@ -8,14 +8,14 @@
  * projects/index.html, projects/project-1.html -> depth 1
  */
 
-function loadComponent(placeholderId: string, componentPath: string): void {
+function loadComponent(placeholderId: string, componentPath: string): Promise<void> {
   const placeholder = document.getElementById(placeholderId);
-  if (!placeholder) return;
+  if (!placeholder) return Promise.resolve();
 
   const depth = parseInt(placeholder.dataset.depth || "0", 10);
   const root = "../".repeat(depth);
 
-  fetch(root + componentPath)
+  return fetch(root + componentPath)
     .then((res) => res.text())
     .then((html) => {
       placeholder.innerHTML = html.replaceAll("__ROOT__", root);
@@ -25,8 +25,8 @@ function loadComponent(placeholderId: string, componentPath: string): void {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("navbar-placeholder", "components/navbar.html");
-  loadComponent("footer-placeholder", "components/footer.html");
-
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+  loadComponent("footer-placeholder", "components/footer.html").then(() => {
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+  });
 });

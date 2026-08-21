@@ -2,10 +2,35 @@
 // Site-wide custom styles
 // -----------------------------------------------------------------------------
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .site-header {
   background-color: $brand-bg;
   font-family: $font-family-sans-serif;
   padding-block: 0.75rem;
+
+  > .container {
+    position: relative;
+    padding-bottom: 0.4rem;
+  }
+
+  > .container::after {
+    position: absolute;
+    right: calc(var(--bs-gutter-x) * 0.5);
+    bottom: 0.15rem;
+    left: calc(var(--bs-gutter-x) * 0.5);
+    height: 2px;
+    background-color: $brand-text;
+    content: "";
+  }
 
   .navbar-brand {
     padding: 0;
@@ -13,7 +38,7 @@
 
   .navbar-brand img {
     display: block;
-    width: 7.5rem;
+    width: 9rem;
     height: auto;
   }
 
@@ -23,14 +48,14 @@
 
   .navbar-nav {
     align-items: flex-end;
-    gap: 0.5rem;
+    gap: 1.25rem;
     margin-left: auto;
   }
 
   .nav-link {
     color: $brand-text;
     font-family: $font-family-heading;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 400;
     line-height: 1;
   }
@@ -38,6 +63,22 @@
   .nav-link:hover,
   .nav-link:focus-visible {
     color: $brand-accent;
+  }
+
+  .dropdown-menu {
+    background-color: $brand-bg;
+  }
+
+  .dropdown-item {
+    color: $brand-text;
+    font-family: $font-family-heading;
+    font-size: 1.25rem;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: $brand-accent;
+    background-color: transparent;
   }
 
   @media (min-width: 768px) {
@@ -48,4 +89,55 @@
 }
 
 .site-footer {
+  color: $brand-bg;
+  background-color: $brand-dark;
+  font-family: $font-family-sans-serif;
+  padding-block: 4rem;
+
+  h2 {
+    margin-bottom: 2.5rem;
+    color: $brand-bg;
+    font-family: $font-family-heading;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .footer-content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  address {
+    display: grid;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+    font-style: normal;
+  }
+
+  a {
+    color: $brand-bg;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: $brand-accent;
+  }
+
+  .footer-copyright {
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+    }
+  }
 }

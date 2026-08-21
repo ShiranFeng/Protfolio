@@ -11860,17 +11860,40 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .site-header {
   background-color: #faf7ee;
   font-family: "Archivo", sans-serif;
   padding-block: 0.75rem;
+}
+.site-header > .container {
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+.site-header > .container::after {
+  position: absolute;
+  right: calc(var(--bs-gutter-x) * 0.5);
+  bottom: 0.15rem;
+  left: calc(var(--bs-gutter-x) * 0.5);
+  height: 2px;
+  background-color: #2b2f33;
+  content: "";
 }
 .site-header .navbar-brand {
   padding: 0;
 }
 .site-header .navbar-brand img {
   display: block;
-  width: 7.5rem;
+  width: 9rem;
   height: auto;
 }
 .site-header .navbar-collapse {
@@ -11878,13 +11901,13 @@ textarea.form-control-lg {
 }
 .site-header .navbar-nav {
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 1.25rem;
   margin-left: auto;
 }
 .site-header .nav-link {
   color: #2b2f33;
   font-family: "Jersey 25", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   line-height: 1;
 }
@@ -11892,8 +11915,67 @@ textarea.form-control-lg {
 .site-header .nav-link:focus-visible {
   color: #324a5f;
 }
+.site-header .dropdown-menu {
+  background-color: #faf7ee;
+}
+.site-header .dropdown-item {
+  color: #2b2f33;
+  font-family: "Jersey 25", sans-serif;
+  font-size: 1.25rem;
+}
+.site-header .dropdown-item:hover,
+.site-header .dropdown-item:focus {
+  color: #324a5f;
+  background-color: transparent;
+}
 @media (min-width: 768px) {
   .site-header .navbar-nav {
     align-items: center;
+  }
+}
+
+.site-footer {
+  color: #faf7ee;
+  background-color: #0c1821;
+  font-family: "Archivo", sans-serif;
+  padding-block: 4rem;
+}
+.site-footer h2, .site-footer .h2 {
+  margin-bottom: 2.5rem;
+  color: #faf7ee;
+  font-family: "Jersey 25", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.site-footer .footer-content {
+  display: grid;
+  gap: 2rem;
+}
+.site-footer address {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+.site-footer a {
+  color: #faf7ee;
+  text-decoration: none;
+}
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #324a5f;
+}
+.site-footer .footer-copyright {
+  margin: 0;
+}
+.site-footer .footer-links {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .site-footer .footer-content {
+    grid-template-columns: 1fr auto;
+    align-items: end;
   }
 }
