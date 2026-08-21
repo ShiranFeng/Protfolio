@@ -6,7 +6,8 @@
  *
  * data-depth = how many folders deep the current page is from the site root.
  * index.html, work.html, gallery.html  -> depth 0
- * projects/index.html, projects/project-1.html -> depth 1
+ * projects/index.html -> depth 1
+ * projects/project-1/index.html -> depth 2
  */
 function loadComponent(placeholderId, componentPath) {
     const placeholder = document.getElementById(placeholderId);

@@ -10,9 +10,9 @@ work.html                Work (resume + experience)
 gallery.html              Gallery (art)
 projects/
   index.html               Projects overview
-  project-1.html            Placeholder project page
-  project-2.html            Placeholder project page
-  project-3.html            Placeholder project page
+  project-1/index.html      Placeholder project page
+  project-2/index.html      Placeholder project page
+  project-3/index.html      Placeholder project page
 
 scss/
   main.scss                 Entry point — imports variables, bootstrap, then custom partials
@@ -41,7 +41,7 @@ sitemap.xml                 Page list for search engines (URLs are placeholders 
 
 ## Adding more project pages
 
-Copy `projects/project-1.html` to `projects/project-4.html` etc, and add a link to it
+Copy `projects/project-1/` to `projects/project-4/` etc, and add a link to it
 from `projects/index.html`. Each project page is independent — content, layout and
 structure can differ page to page.
 
