@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .sg-swatch {
+      height: 90px;
+      border-radius: 4px;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+      font-family: var(--bs-font-sans-serif);
+      font-size: 0.8rem;
+    }
+
+    .sg-swatch--bordered {
+      border: 1px solid var(--bs-secondary);
+    }
+
+    .sg-section {
+      margin-bottom: 6rem;
+    }
+
+    .sg-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--bs-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .sg-spacing-bar {
+      background: var(--bs-primary);
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder" data-depth="0"></div>
+
+  <main class="container py-5">
+    <h1>Style Guide</h1>
+    <p class="text-secondary mb-5">
+      This page pulls live values from <code>css/main.css</code> — colors are
+      read from Bootstrap's CSS variables and buttons use the real
+      <code>.btn</code> classes. Changing a value in
+      <code>scss/_variables.scss</code> and rebuilding will update this page
+      too, not just a hardcoded reference.
+    </p>
+
+    <section class="sg-section">
+      <h2>Colors</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="sg-swatch" style="background: var(--bs-primary); color: var(--brand-on-dark);">
+            Primary dark
+          </div>
+          <p class="mt-2 mb-0 small">--bs-primary</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="sg-swatch" style="background: var(--bs-secondary); color: var(--brand-on-dark);">
+            Accent slate
+          </div>
+          <p class="mt-2 mb-0 small">--bs-secondary</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="sg-swatch sg-swatch--bordered" style="background: var(--bs-body-bg); color: var(--bs-body-color);">
+            Background
+          </div>
+          <p class="mt-2 mb-0 small">--bs-body-bg</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="sg-swatch sg-swatch--bordered" style="background: var(--bs-body-bg); color: var(--bs-body-color);">
+            Body text
+          </div>
+          <p class="mt-2 mb-0 small">--bs-body-color</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sg-section">
+      <h2>Typography</h2>
+      <div class="mb-4">
+        <p class="sg-label">Headings — Jersey 25</p>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+      </div>
+      <div>
+        <p class="sg-label">Body — Archivo</p>
+        <p class="fw-normal">Regular paragraph text (400) — the quick brown fox jumps over the lazy dog.</p>
+        <p class="fw-medium">Medium weight (500) — used for emphasis and UI labels.</p>
+        <p class="fw-bold">Bold weight (700) — used sparingly for strong emphasis.</p>
+      </div>
+    </section>
+
+    <section class="sg-section">
+      <h2>Buttons</h2>
+      <p class="sg-label">Variants</p>
+      <div class="d-flex gap-3 flex-wrap mb-4">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-outline-primary">Outline</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+      </div>
+      <p class="sg-label">Sizes</p>
+      <div class="d-flex gap-3 flex-wrap align-items-center">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Medium</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+      </div>
+    </section>
+
+    <section class="sg-section">
+      <h2>Spacing scale</h2>
+      <p class="text-secondary small mb-4">Base unit: 8px. Bars below are drawn at each token's actual size.</p>
+      <div class="d-flex flex-column gap-2">
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">4px</span><div class="sg-spacing-bar" style="width: 4px;"></div></div>
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">8px</span><div class="sg-spacing-bar" style="width: 8px;"></div></div>
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">16px</span><div class="sg-spacing-bar" style="width: 16px;"></div></div>
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">24px</span><div class="sg-spacing-bar" style="width: 24px;"></div></div>
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">32px</span><div class="sg-spacing-bar" style="width: 32px;"></div></div>
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">48px</span><div class="sg-spacing-bar" style="width: 48px;"></div></div>
+        <div class="d-flex align-items-center gap-3"><span class="small" style="width: 60px;">64px</span><div class="sg-spacing-bar" style="width: 64px;"></div></div>
+      </div>
+    </section>
+
+    <section class="sg-section">
+      <h2>Logo &amp; Favicon</h2>
+      <div class="d-flex gap-4 align-items-center flex-wrap">
+        <img src="assets/logo_black.png" alt="Logo" style="height: 60px;">
+        <img src="assets/favicon.png" alt="Favicon" style="height: 32px; width: 32px;">
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder" data-depth="0"></div>
+
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -6,8 +6,9 @@
 // Brand colors
 $brand-dark:   #0c1821; // primary dark
 $brand-accent: #324a5f; // slate accent
-$brand-bg:     #faf7ee; // background cream
+$brand-bg:     #fcf9f3; // background cream
 $brand-text:   #2b2f33; // body text, dark gray (not pure black)
+$brand-on-dark: #ffffff; // text and UI shown on dark surfaces
 
 $primary:   $brand-dark;
 $secondary: $brand-accent;
@@ -20,3 +21,76 @@ $body-color: $brand-text;
 $font-family-heading: "Jersey 25", sans-serif;
 $font-family-sans-serif: "Archivo", sans-serif;
 $headings-font-family: $font-family-heading;
+
+// -----------------------------------------------------------------------------
+// Spacing scale
+// Base unit: 8px. Use these tokens instead of arbitrary px values.
+// -----------------------------------------------------------------------------
+$spacer: 1rem; // 16px
+
+$spacing: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 2rem,
+  6: 3rem,
+  7: 4rem,
+  8: 6rem,
+  9: 8rem,
+);
+
+$spacers: (
+  0: map-get($spacing, 0),
+  1: map-get($spacing, 1),
+  2: map-get($spacing, 2),
+  3: map-get($spacing, 3),
+  4: map-get($spacing, 4),
+  5: map-get($spacing, 5),
+  6: map-get($spacing, 6),
+  7: map-get($spacing, 7),
+  8: map-get($spacing, 8),
+  9: map-get($spacing, 9),
+);
+
+// -----------------------------------------------------------------------------
+// Container widths & page padding
+// -----------------------------------------------------------------------------
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px,
+);
+
+$container-padding-x-mobile: 1rem;
+$container-padding-x-tablet: 1.5rem;
+$container-padding-x-desktop: 3rem;
+
+$grid-gutter-width: 1.5rem;
+
+// -----------------------------------------------------------------------------
+// Buttons — flat, uppercase, letter-spaced
+// -----------------------------------------------------------------------------
+$btn-border-radius: 2px;
+$btn-border-radius-sm: 2px;
+$btn-border-radius-lg: 2px;
+
+$btn-font-weight: 500;
+$btn-letter-spacing: 0.08em;
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-font-size: 0.8125rem;
+
+$btn-padding-y-sm: 0.5rem;
+$btn-padding-x-sm: 1rem;
+$btn-font-size-sm: 0.6875rem;
+
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 2rem;
+$btn-font-size-lg: 0.9375rem;
+
+$btn-hover-darken: 8%;
