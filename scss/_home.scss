@@ -1,3 +1,72 @@
 // -----------------------------------------------------------------------------
 // home page styles
 // -----------------------------------------------------------------------------
+
+.work-orbit {
+  position: relative;
+  width: calc(100% + 1rem);
+  height: clamp(360px, 58vw, 690px);
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    width: calc(100% + 2rem);
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: calc(100% + 5rem);
+    margin-right: -2.5rem;
+    margin-left: -2.5rem;
+  }
+}
+
+.work-orbit__planet {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) rotate(var(--planet-rotation, 0deg));
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translate(-50%, -50%) rotate(var(--planet-rotation, 0deg)) scale(1.15);
+  }
+}
+
+.work-orbit__bubble {
+  position: absolute;
+  width: 200px;
+  background: $brand-bg;
+  border: 1.5px solid $brand-accent;
+  border-radius: 4px;
+  padding: 0.75rem;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(12, 24, 33, 0.12);
+}
+
+.work-orbit__bubble-date {
+  font-size: 11px;
+  color: $brand-accent;
+  margin: 0 0 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.work-orbit__bubble-title {
+  font-weight: 500;
+  font-size: 13px;
+  margin: 0 0 4px;
+  color: $brand-text;
+}
+
+.work-orbit__bubble-body {
+  font-size: 12px;
+  color: $brand-text;
+  margin: 0;
+  line-height: 1.5;
+}

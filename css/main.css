@@ -125,6 +125,76 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
+.work-orbit {
+  position: relative;
+  width: calc(100% + 1rem);
+  height: clamp(360px, 58vw, 690px);
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .work-orbit {
+    width: calc(100% + 2rem);
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+@media (min-width: 992px) {
+  .work-orbit {
+    width: calc(100% + 5rem);
+    margin-right: -2.5rem;
+    margin-left: -2.5rem;
+  }
+}
+.work-orbit__planet {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) rotate(var(--planet-rotation, 0deg));
+  transition: transform 0.15s ease;
+}
+.work-orbit__planet:hover {
+  transform: translate(-50%, -50%) rotate(var(--planet-rotation, 0deg)) scale(1.15);
+}
+
+.work-orbit__bubble {
+  position: absolute;
+  width: 200px;
+  background: #fcf9f3;
+  border: 1.5px solid #324a5f;
+  border-radius: 4px;
+  padding: 0.75rem;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(12, 24, 33, 0.12);
+}
+
+.work-orbit__bubble-date {
+  font-size: 11px;
+  color: #324a5f;
+  margin: 0 0 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.work-orbit__bubble-title {
+  font-weight: 500;
+  font-size: 13px;
+  margin: 0 0 4px;
+  color: #2b2f33;
+}
+
+.work-orbit__bubble-body {
+  font-size: 12px;
+  color: #2b2f33;
+  margin: 0;
+  line-height: 1.5;
+}
+
+
 [data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
@@ -13469,28 +13539,18 @@ main {
 }
 .site-header > .container {
   position: relative;
+  padding-right: 0.5rem;
   padding-bottom: 0.4rem;
+  padding-left: 0.5rem;
 }
 .site-header > .container::after {
   position: absolute;
-  right: 1rem;
+  right: 0.5rem;
   bottom: 0.15rem;
-  left: 1rem;
+  left: 0.5rem;
   height: 2px;
   background-color: #2b2f33;
   content: "";
-}
-@media (min-width: 768px) {
-  .site-header > .container::after {
-    right: 1.5rem;
-    left: 1.5rem;
-  }
-}
-@media (min-width: 992px) {
-  .site-header > .container::after {
-    right: 3rem;
-    left: 3rem;
-  }
 }
 .site-header .navbar-brand {
   padding: 0;
@@ -13543,6 +13603,10 @@ main {
   background-color: #0c1821;
   font-family: "Archivo", sans-serif;
   padding-block: 4rem;
+}
+.site-footer > .container {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 .site-footer h2, .site-footer .h2 {
   margin-bottom: 2.5rem;

@@ -23,27 +23,21 @@ main {
 
   > .container {
     position: relative;
+    padding-right: 0.5rem;
     padding-bottom: 0.4rem;
+    padding-left: 0.5rem;
+
   }
 
   > .container::after {
     position: absolute;
-    right: $container-padding-x-mobile;
+    right: 0.5rem;
     bottom: 0.15rem;
-    left: $container-padding-x-mobile;
+    left: 0.5rem;
     height: 2px;
     background-color: $brand-text;
     content: "";
 
-    @include media-breakpoint-up(md) {
-      right: $container-padding-x-tablet;
-      left: $container-padding-x-tablet;
-    }
-
-    @include media-breakpoint-up(lg) {
-      right: $container-padding-x-desktop;
-      left: $container-padding-x-desktop;
-    }
   }
 
   .navbar-brand {
@@ -107,6 +101,12 @@ main {
   background-color: $brand-dark;
   font-family: $font-family-sans-serif;
   padding-block: 4rem;
+
+  > .container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+  }
 
   h2 {
     margin-bottom: 2.5rem;
