@@ -19,7 +19,7 @@ const WORK_ENTRIES = [
         size: 184,
         image: "assets/orbit-icons/snowboard.png",
         rotation: 20,
-        link: "projects/project-1/",
+        link: "projects/draw/",
     },
     {
         date: "Daily ritual",
@@ -30,7 +30,7 @@ const WORK_ENTRIES = [
         phase: 2.1,
         size: 128,
         image: "assets/orbit-icons/drink.png",
-        link: "work.html",
+        link: "work",
     },
     {
         date: "Hot pot",
@@ -42,7 +42,7 @@ const WORK_ENTRIES = [
         size: 164,
         image: "assets/orbit-icons/hotpot.png",
         rotation: 20,
-        link: "work.html",
+        link: "work",
     },
     {
         date: "Companionship",
@@ -53,7 +53,7 @@ const WORK_ENTRIES = [
         phase: 1.2,
         size: 144,
         image: "assets/orbit-icons/dog.png",
-        link: "index.html#about",
+        link: "#about",
     },
     {
         date: "Painting",
@@ -64,7 +64,7 @@ const WORK_ENTRIES = [
         phase: 5.35,
         size: 172,
         image: "assets/orbit-icons/palette.png",
-        link: "gallery.html",
+        link: "gallery",
     },
 ];
 // Tuning constants for the contour animation

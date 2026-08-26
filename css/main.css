@@ -13560,6 +13560,10 @@ main {
   font-family: "Archivo", sans-serif;
   padding-block: 0.75rem;
 }
+.site-header a {
+  pointer-events: none;
+  cursor: default;
+}
 .site-header > .container {
   max-width: 1800px;
   position: relative;
@@ -13766,6 +13770,103 @@ main {
   main a:focus-visible {
     color: #0c1821;
   }
+}
+
+.project-index {
+  display: grid;
+  margin: 3rem 0 6rem;
+  border-top: 1px solid #2b2f33;
+}
+
+.project-index__item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  color: #2b2f33;
+  border-bottom: 1px solid #2b2f33;
+  text-decoration: none;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+.project-index__item:hover,
+.project-index__item:focus-visible {
+  padding-left: 0.5rem;
+  color: #0c1821;
+}
+
+.project-index__item strong,
+.project-index__item small {
+  display: block;
+}
+
+.project-index__item strong {
+  font-family: "Jersey 25", sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.project-index__item small {
+  margin-top: 0.4rem;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-index__number,
+.project-detail__type {
+  color: #0c1821;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-detail {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+
+.project-detail h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(3.5rem, 9vw, 9rem);
+}
+
+.project-detail > p:last-child {
+  max-width: 42rem;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.error-page {
+  display: flex;
+  min-height: 60vh;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.error-page__code {
+  margin: 0 0 0.5rem;
+  color: #0c1821;
+  font-family: "Jersey 25", sans-serif;
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: 0.8;
+}
+
+.error-page h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.error-page__message {
+  max-width: 34rem;
+  margin-bottom: 2rem;
 }
 
 .home-banner {
