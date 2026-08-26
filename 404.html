@@ -24,15 +24,20 @@
   <div id="navbar-placeholder" data-depth="0"></div>
 
   <main class="container error-page">
-    <p class="error-page__code" aria-hidden="true">404</p>
-    <h1>Page not found</h1>
-    <p class="error-page__message">The page you’re looking for doesn’t exist or may have moved.</p>
-    <a class="btn btn-primary" href="./">Back to home</a>
+    <canvas id="rain-404" class="error-page__rain" aria-hidden="true"></canvas>
+    <div class="error-page__content">
+      <p class="error-page__code" aria-hidden="true">404</p>
+      <h1>Oops, this page wandered off the map.</h1>
+      <p class="error-page__message">It may still be under construction, much like me: learning, testing, and improving along the way.</p>
+      <p class="error-page__note"><strong>Good things take time. Better things take patience.</strong></p>
+      <button class="btn btn-primary" type="button" disabled aria-disabled="true">Back to home</button>
+    </div>
   </main>
 
   <div id="footer-placeholder" data-depth="0"></div>
 
   <script src="js/vendor/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/rain-404.js"></script>
 </body>
 </html>
