@@ -14582,3 +14582,16 @@ main {
   .work-hero__scroll { transition: none; }
   .work-hero__scroll svg { animation: none; }
 }
+
+.resume-section--contact .work-contact-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+.work-contact-actions > .btn {
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+}

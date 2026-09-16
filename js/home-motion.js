@@ -8,7 +8,6 @@
   const follower = document.querySelector('.draft-follower');
   const curiosity = document.querySelector('.draft-curiosity');
   const dialog = document.querySelector('.draft-dialog');
-  const toggle = document.querySelector('#mind-toggle');
   let introAnimations = [];
   let introVersion = 0;
   let introTimer;
@@ -20,8 +19,6 @@
 
   function setPaper(open) {
     hero.classList.toggle('is-open', open);
-    toggle.setAttribute('aria-pressed', String(!open));
-    toggle.textContent = open ? 'Close the paper ↗' : 'Open the paper ↗';
   }
   async function intro() {
     const version = ++introVersion;
@@ -45,11 +42,6 @@
       hero.classList.remove('is-entering');
     }, 1900);
   }
-  toggle.addEventListener('click', () => {
-    clearTimeout(introTimer);
-    setPaper(!hero.classList.contains('is-open'));
-  });
-
   function configureMotion() {
     body.classList.toggle('motion-enabled', !reduced.matches);
     observer?.disconnect();
@@ -95,20 +87,58 @@
   addEventListener('scroll', scheduleScroll, { passive: true });
   addEventListener('resize', scheduleScroll);
   addEventListener('load', scheduleScroll);
-  hero.addEventListener('pointermove', event => {
-    if (reduced.matches || !finePointer.matches) return;
-    const rect = hero.getBoundingClientRect();
-    hero.style.setProperty('--look-x', `${((event.clientX - rect.left) / rect.width - .5) * 12}px`);
-    hero.style.setProperty('--look-y', `${((event.clientY - rect.top) / rect.height - .5) * 6}px`);
-  });
-  hero.addEventListener('pointerleave', () => {
-    hero.style.setProperty('--look-x','0px');
-    hero.style.setProperty('--look-y','0px');
-  });
-  document.querySelector('#replay').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    intro();
-  });
+  const eyes = hero.querySelector('.mind-eyes');
+  const eyeWindows = [...eyes.querySelectorAll('.mind-eye')];
+  // Eye centers are registered independently: the source grid has uneven gutters.
+  const gazeFrames = {
+    nw: [142, 222, 177], n: [525, 606, 177], ne: [916, 997, 177],
+    w: [142, 222, 621], center: [525, 606, 621], e: [916, 997, 621],
+    sw: [142, 222, 1081], s: [525, 606, 1081], se: [916, 997, 1081]
+  };
+  const sectors = ['e', 'se', 's', 'sw', 'w', 'nw', 'n', 'ne'];
+  let gazeFrame = 0;
+  let pointer = null;
+  function setGaze(direction) {
+    if (eyes.dataset.gaze === direction) return;
+    eyes.dataset.gaze = direction;
+    const [left, right, y] = gazeFrames[direction];
+    [left, right].forEach((x, i) => eyeWindows[i].setAttribute('viewBox', `${x - 32} ${y - 19} 64 38`));
+  }
+  function resetGaze() {
+    pointer = null;
+    cancelAnimationFrame(gazeFrame);
+    gazeFrame = 0;
+    setGaze('center');
+  }
+  function updateGaze() {
+    gazeFrame = 0;
+    if (!pointer) return;
+    const rect = eyes.getBoundingClientRect();
+    if (rect.bottom <= 0 || rect.top >= innerHeight) return resetGaze();
+    const dx = pointer.x - (rect.left + rect.width * 602 / 1164);
+    const dy = pointer.y - (rect.top + rect.height * 583 / 1351);
+    const distance = Math.hypot(dx, dy);
+    const deadZone = Math.max(22, rect.width * .085);
+    if (distance < deadZone) return setGaze('center');
+    const angle = Math.atan2(dy, dx);
+    const sector = (Math.round(angle / (Math.PI / 4)) + 8) % 8;
+    // Keep the current frame near a sector boundary to avoid flicker.
+    const previous = sectors.indexOf(eyes.dataset.gaze);
+    if (previous >= 0) {
+      const delta = Math.atan2(Math.sin(angle - previous * Math.PI / 4), Math.cos(angle - previous * Math.PI / 4));
+      if (Math.abs(delta) < Math.PI / 8 + .06) return;
+    }
+    setGaze(sectors[sector]);
+  }
+  document.addEventListener('pointermove', event => {
+    if (!finePointer.matches || event.pointerType === 'touch') return;
+    pointer = { x: event.clientX, y: event.clientY };
+    if (!gazeFrame) gazeFrame = requestAnimationFrame(updateGaze);
+  }, { passive: true });
+  document.documentElement.addEventListener('pointerleave', resetGaze);
+  addEventListener('blur', resetGaze);
+  addEventListener('scroll', resetGaze, { passive: true });
+  finePointer.addEventListener('change', resetGaze);
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {
       const target = document.querySelector(link.getAttribute('href'));

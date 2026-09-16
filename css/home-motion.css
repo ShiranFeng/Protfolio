@@ -41,7 +41,7 @@
 .mind-name{position:absolute;z-index:0;top:1%;width:100%;padding:0 2vw;margin:0;text-align:center;white-space:nowrap;font-family:'Jersey 25',sans-serif;font-size:clamp(6rem,19.4vw,24rem);line-height:1;color:var(--bs-body-bg);letter-spacing:-.025em}
 .mind-role{position:absolute;top:calc(19vw + 1rem);right:3rem;font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;z-index:1}
 .mind-scene{position:absolute;inset:0;pointer-events:none;perspective:1000px}
-.mind-portrait{position:absolute;width:min(630px,72svh,65vw);aspect-ratio:1164/1351;left:50%;bottom:2%;margin-left:calc(min(630px,72svh,65vw) / -2);transform:translate(var(--look-x,0px),calc(var(--look-y,0px) + var(--scene-scroll,0px)));transition:transform .3s ease-out;}
+.mind-portrait{position:absolute;width:min(630px,72svh,65vw);aspect-ratio:1164/1351;left:50%;bottom:-13%;margin-left:calc(min(630px,72svh,65vw) / -2);transform:translate(var(--look-x,0px),calc(var(--look-y,0px) + var(--scene-scroll,0px)));transition:transform .3s ease-out;}
 .mind-lower,.mind-cap,.mind-cap__front,.mind-cap__back{position:absolute;inset:0}
 .mind-lower{clip-path:url(#portrait-lower);z-index:4}
 .mind-lower img,.mind-cap img{display:block;width:100%;height:100%;clip-path:url(#portrait-outline)}
@@ -60,13 +60,15 @@
 .mind-prop{position:absolute;transform:translateY(100px) scale(0) rotate(var(--prop-rotation,0deg));transform-origin:center bottom;opacity:0;transition:transform .6s cubic-bezier(.34,1.65,.4,1),opacity .2s;filter:drop-shadow(0 8px 5px #0003)}
 .mind-prop img{width:100%;height:100%;object-fit:contain;display:block}
 .mind-hero.is-open .mind-prop{transform:translateY(0) scale(1) rotate(var(--prop-rotation,0deg));opacity:1;transition-delay:var(--prop-delay,.35s)}
-.mind-prop--drink{left:13%;top:28%;width:17%;height:16%;--prop-rotation:-20deg;--prop-delay:.3s}
-.mind-prop--paint{left:21%;top:17%;width:28%;height:26%;--prop-rotation:-16deg;--prop-delay:.4s}
-.mind-prop--dog{left:37%;top:20%;width:24%;height:24%;--prop-rotation:6deg;--prop-delay:.5s}
+.mind-prop--drink{left:9%;top:10%;width:25%;height:26%;z-index:3;--prop-rotation:-18deg;--prop-delay:.3s}
+.mind-prop--paint{left:5%;top:23%;width:40%;height:32%;z-index:2;--prop-rotation:-13deg;--prop-delay:.4s}
+.mind-prop--dog{left:32%;top:10%;width:46%;height:37%;z-index:5;--prop-rotation:5deg;--prop-delay:.5s}
 .mind-prop--board{left:52%;top:23%;width:29%;height:16%;padding:8px;background:var(--bs-body-bg);border:3px solid var(--bs-primary);color:var(--bs-secondary);--prop-rotation:13deg;--prop-delay:.58s;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 0 0 3px var(--bs-body-bg)}
 .mind-prop--board>span{font-family:'Jersey 25',sans-serif;font-size:clamp(1.1rem,3vw,2.8rem);line-height:.8;text-align:center}.mind-prop--board small{font-size:5px;letter-spacing:.04em;margin-top:5px}
-.mind-prop--app{left:76%;top:28%;width:12%;height:13%;--prop-rotation:16deg;--prop-delay:.66s}
-.mind-prop--snow{left:47%;top:12%;width:12%;height:24%;--prop-rotation:-25deg;--prop-delay:.46s}
+.mind-prop--ocad{left:63%;top:12%;width:31%;height:25%;z-index:2;--prop-rotation:12deg;--prop-delay:.58s}
+.mind-prop--hotpot{left:68%;top:25%;width:29%;height:21%;z-index:6;--prop-rotation:14deg;--prop-delay:.66s}
+.mind-prop--snow{left:37%;top:-2%;width:22%;height:42%;z-index:1;--prop-rotation:-22deg;--prop-delay:.46s}
+@media(max-width:700px){.mind-props{scale:.84;transform-origin:50% 40%}}
 .mind-corner-card{position:absolute;z-index:7;left:2rem;bottom:-1rem;width:145px;padding:10px 10px 20px;background:var(--bs-body-bg);color:var(--bs-primary);text-decoration:none;transform:rotate(-12deg);transition:transform .45s;box-shadow:0 8px 25px #0004}
 .mind-corner-card:hover,.mind-corner-card:focus-visible{transform:translateY(-20px) rotate(-4deg)}
 .mind-corner-card>span{display:block;font-size:.55rem;text-transform:uppercase;letter-spacing:.08em}.mind-corner-card strong{font-family:'Jersey 25',sans-serif;display:block;font-size:1.2rem}.mind-corner-card img{width:100%;height:75px;object-fit:cover;margin-top:7px}
@@ -76,5 +78,10 @@
 .mind-hero:not(.is-open) .mind-prop{transition-delay:0s}
 .draft-work{padding-top:6rem}
 @media(min-width:1600px){.mind-role{top:25rem}}
-@media(max-width:700px){.mind-hero{height:calc(100svh - 64px);min-height:560px}.mind-name{top:5%;font-size:19vw}.mind-role{top:23%;right:0;width:100%;text-align:center;font-size:.55rem}.mind-portrait{width:min(520px,105vw);margin-left:calc(min(520px,105vw) / -2);bottom:4%}.mind-corner-card{width:100px;left:1rem;bottom:-.5rem;padding:7px}.mind-corner-card img{height:55px}.mind-corner-card strong{font-size:1rem}.mind-scroll{right:1rem;bottom:5.5rem;font-size:.55rem}.mind-controls{right:1rem;bottom:1.2rem;gap:.5rem}.mind-controls>span{display:none}.mind-controls button{font-size:.6rem}.mind-prop--board>span{font-size:1.7rem}}
+@media(max-width:700px){.mind-hero{height:calc(100svh - 64px);min-height:560px}.mind-name{top:5%;font-size:19vw}.mind-role{top:23%;right:0;width:100%;text-align:center;font-size:.55rem}.mind-portrait{width:min(520px,105vw);margin-left:calc(min(520px,105vw) / -2);bottom:-11%}.mind-corner-card{width:100px;left:1rem;bottom:-.5rem;padding:7px}.mind-corner-card img{height:55px}.mind-corner-card strong{font-size:1rem}.mind-scroll{right:1rem;bottom:5.5rem;font-size:.55rem}.mind-controls{right:1rem;bottom:1.2rem;gap:.5rem}.mind-controls>span{display:none}.mind-controls button{font-size:.6rem}.mind-prop--board>span{font-size:1.7rem}}
 @media(prefers-reduced-motion:reduce){.mind-cap{display:none}.mind-rim{opacity:1}.mind-prop{opacity:1;transform:rotate(var(--prop-rotation,0deg))}.mind-hero:not(.is-open) .mind-prop{opacity:0}.mind-controls{display:none}.mind-portrait{transform:none!important}}
+
+/* Registered eye windows sample the supplied nine-frame portrait without moving the paper. */
+.mind-eyes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.mind-eye{position:absolute;top:38.9341%;width:16.4948%;height:8.4382%;overflow:hidden;mask-image:radial-gradient(ellipse closest-side,#000 55%,transparent 100%)}
+.mind-eye--left{left:32.3883%}.mind-eye--right{left:54.5533%}
