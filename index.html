@@ -2,42 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Shiran Alex</title>
+  <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home-motion.css">
+  <link rel="stylesheet" href="css/home-paper.css">
+  <script src="js/home-motion.js" defer></script>
+  <script src="js/home-paper.js" defer></script>
 </head>
-<body>
+<body class="motion-home">
+  <a class="draft-skip" href="#main">Skip to content</a>
 
   <div id="navbar-placeholder" data-depth="0"></div>
-
-  <main class="container home-banner-container">
-    <section class="home-banner" aria-labelledby="home-intro-title">
-      <div class="home-banner__visual">
-        <div id="work-orbit" class="work-orbit"></div>
+  <main id="main">
+    <section class="mind-hero" id="torn-paper-mind" aria-labelledby="hero-title">
+      <h1 class="mind-name" id="hero-title">Shiran Alex</h1>
+      <p class="mind-role">Illustration. Stories. A little imagination.</p>
+      <svg class="mind-definitions" width="0" height="0" aria-hidden="true"><defs>
+        <clipPath id="portrait-outline" clipPathUnits="objectBoundingBox"><path d="M.49,.047 L.55,.071 .62,.079 .71,.112 .77,.167 .823,.235 .862,.308 .849,.369 .819,.425 .786,.458 .772,.507 .746,.57 .706,.634 .677,.698 .64,.756 .647,.799 .669,.828 .652,.868 .597,.885 .555,.915 .503,.926 .458,.902 .408,.893 .356,.874 .298,.853 .257,.814 .24,.774 .264,.721 .266,.656 .244,.586 .222,.538 .196,.514 .178,.465 .166,.404 .139,.367 .14,.305 .177,.253 .206,.197 .265,.151 .323,.113 .393,.082 .454,.063 Z"/></clipPath>
+        <clipPath id="portrait-lower" clipPathUnits="objectBoundingBox"><path d="M0,0.369677 L0.141753,0.369677 0.146111,0.369539 0.149420,0.370993 0.152943,0.371995 0.155891,0.369180 0.159115,0.371735 0.164747,0.372737 0.169067,0.370612 0.172980,0.370258 0.176095,0.372878 0.179800,0.374342 0.182401,0.372707 0.186619,0.372737 0.190802,0.371040 0.193789,0.374251 0.197784,0.372015 0.201898,0.372291 0.206935,0.373033 0.212252,0.370530 0.217912,0.370964 0.223388,0.372914 0.228227,0.368946 0.231353,0.370174 0.235006,0.370792 0.240258,0.371303 0.244165,0.369022 0.248951,0.369282 0.254604,0.370042 0.257491,0.369390 0.260295,0.368513 0.265485,0.369353 0.269881,0.369939 0.274395,0.369679 0.277762,0.368632 0.282424,0.370984 0.287006,0.368558 0.290313,0.370320 0.295106,0.369842 0.299132,0.368905 0.302731,0.371380 0.307459,0.368095 0.312558,0.370105 0.315872,0.368564 0.320997,0.368169 0.324870,0.371187 0.329375,0.367690 0.333525,0.368674 0.337237,0.367006 0.341509,0.366320 0.345399,0.366065 0.350846,0.366127 0.356539,0.364922 0.362511,0.362584 0.367682,0.361648 0.370462,0.360666 0.374350,0.359936 0.378504,0.359851 0.381814,0.361230 0.386952,0.361548 0.392757,0.361273 0.397895,0.358107 0.402203,0.358495 0.405997,0.355605 0.411346,0.353447 0.416145,0.353786 0.420043,0.350406 0.423277,0.352699 0.427854,0.350455 0.432869,0.348380 0.438832,0.347316 0.443032,0.348658 0.446046,0.347610 0.448865,0.348708 0.453961,0.344985 0.458090,0.346088 0.460748,0.348148 0.464581,0.346682 0.470036,0.344539 0.474701,0.343867 0.479307,0.343788 0.484289,0.343842 0.488033,0.342084 0.493701,0.341394 0.497869,0.341901 0.502789,0.341029 0.507854,0.338336 0.510701,0.339634 0.515807,0.339211 0.520168,0.337614 0.523058,0.337349 0.525861,0.340530 0.530738,0.340354 0.533919,0.338321 0.539572,0.341806 0.543497,0.338833 0.549354,0.341017 0.553971,0.339597 0.557378,0.340305 0.562362,0.341999 0.566814,0.343903 0.572742,0.342954 0.577895,0.343571 0.581531,0.342234 0.584286,0.343163 0.587307,0.342140 0.593238,0.342209 0.598689,0.343615 0.603642,0.344585 0.609243,0.344331 0.613194,0.346992 0.618857,0.346839 0.624222,0.350119 0.628641,0.349985 0.634562,0.350492 0.640062,0.350714 0.645955,0.351112 0.649996,0.349532 0.653367,0.352487 0.658039,0.349775 0.662531,0.351866 0.666795,0.349754 0.672695,0.351462 0.677083,0.349126 0.679820,0.348694 0.685649,0.346104 0.689829,0.348035 0.693539,0.347865 0.698574,0.345511 0.704587,0.346443 0.708227,0.348219 0.711218,0.344946 0.717227,0.344821 0.721988,0.345369 0.727067,0.341062 0.731174,0.339042 0.735046,0.338419 0.739204,0.337576 0.743615,0.337508 0.747626,0.335937 0.753059,0.334293 0.757732,0.335268 0.762371,0.331861 0.768068,0.332185 0.773603,0.333539 0.778664,0.331337 0.784387,0.332378 0.789708,0.331704 0.792500,0.328484 0.798415,0.328040 0.801649,0.327752 0.805237,0.329153 0.808761,0.329768 0.811878,0.327883 0.814581,0.326841 0.818196,0.327877 0.821745,0.327240 0.827313,0.329087 0.832283,0.326445 0.837848,0.326050 0.840709,0.325104 0.845725,0.327312 0.849495,0.325240 0.854431,0.324701 0.859467,0.326396 0.863990,0.324182 0.865979,0.325685 L1,0.325685 V1 H0Z"/></clipPath>
+        <clipPath id="portrait-cap" clipPathUnits="objectBoundingBox"><path d="M0,0 H1 V0.325685 L0.865979,0.325685 0.863990,0.324182 0.859467,0.326396 0.854431,0.324701 0.849495,0.325240 0.845725,0.327312 0.840709,0.325104 0.837848,0.326050 0.832283,0.326445 0.827313,0.329087 0.821745,0.327240 0.818196,0.327877 0.814581,0.326841 0.811878,0.327883 0.808761,0.329768 0.805237,0.329153 0.801649,0.327752 0.798415,0.328040 0.792500,0.328484 0.789708,0.331704 0.784387,0.332378 0.778664,0.331337 0.773603,0.333539 0.768068,0.332185 0.762371,0.331861 0.757732,0.335268 0.753059,0.334293 0.747626,0.335937 0.743615,0.337508 0.739204,0.337576 0.735046,0.338419 0.731174,0.339042 0.727067,0.341062 0.721988,0.345369 0.717227,0.344821 0.711218,0.344946 0.708227,0.348219 0.704587,0.346443 0.698574,0.345511 0.693539,0.347865 0.689829,0.348035 0.685649,0.346104 0.679820,0.348694 0.677083,0.349126 0.672695,0.351462 0.666795,0.349754 0.662531,0.351866 0.658039,0.349775 0.653367,0.352487 0.649996,0.349532 0.645955,0.351112 0.640062,0.350714 0.634562,0.350492 0.628641,0.349985 0.624222,0.350119 0.618857,0.346839 0.613194,0.346992 0.609243,0.344331 0.603642,0.344585 0.598689,0.343615 0.593238,0.342209 0.587307,0.342140 0.584286,0.343163 0.581531,0.342234 0.577895,0.343571 0.572742,0.342954 0.566814,0.343903 0.562362,0.341999 0.557378,0.340305 0.553971,0.339597 0.549354,0.341017 0.543497,0.338833 0.539572,0.341806 0.533919,0.338321 0.530738,0.340354 0.525861,0.340530 0.523058,0.337349 0.520168,0.337614 0.515807,0.339211 0.510701,0.339634 0.507854,0.338336 0.502789,0.341029 0.497869,0.341901 0.493701,0.341394 0.488033,0.342084 0.484289,0.343842 0.479307,0.343788 0.474701,0.343867 0.470036,0.344539 0.464581,0.346682 0.460748,0.348148 0.458090,0.346088 0.453961,0.344985 0.448865,0.348708 0.446046,0.347610 0.443032,0.348658 0.438832,0.347316 0.432869,0.348380 0.427854,0.350455 0.423277,0.352699 0.420043,0.350406 0.416145,0.353786 0.411346,0.353447 0.405997,0.355605 0.402203,0.358495 0.397895,0.358107 0.392757,0.361273 0.386952,0.361548 0.381814,0.361230 0.378504,0.359851 0.374350,0.359936 0.370462,0.360666 0.367682,0.361648 0.362511,0.362584 0.356539,0.364922 0.350846,0.366127 0.345399,0.366065 0.341509,0.366320 0.337237,0.367006 0.333525,0.368674 0.329375,0.367690 0.324870,0.371187 0.320997,0.368169 0.315872,0.368564 0.312558,0.370105 0.307459,0.368095 0.302731,0.371380 0.299132,0.368905 0.295106,0.369842 0.290313,0.370320 0.287006,0.368558 0.282424,0.370984 0.277762,0.368632 0.274395,0.369679 0.269881,0.369939 0.265485,0.369353 0.260295,0.368513 0.257491,0.369390 0.254604,0.370042 0.248951,0.369282 0.244165,0.369022 0.240258,0.371303 0.235006,0.370792 0.231353,0.370174 0.228227,0.368946 0.223388,0.372914 0.217912,0.370964 0.212252,0.370530 0.206935,0.373033 0.201898,0.372291 0.197784,0.372015 0.193789,0.374251 0.190802,0.371040 0.186619,0.372737 0.182401,0.372707 0.179800,0.374342 0.176095,0.372878 0.172980,0.370258 0.169067,0.370612 0.164747,0.372737 0.159115,0.371735 0.155891,0.369180 0.152943,0.371995 0.149420,0.370993 0.146111,0.369539 0.141753,0.369677 L0,0.369677Z"/></clipPath>
+      </defs></svg>
+      <div class="mind-scene">
+        <div class="mind-portrait" role="img" aria-label="Shiran's painted portrait opens like torn paper, revealing illustration tools and ideas">
+          <div class="mind-props" aria-hidden="true">
+            <div class="mind-prop mind-prop--drink"><img src="assets/orbit-icons/drink.png" alt=""></div>
+            <div class="mind-prop mind-prop--paint"><img src="assets/orbit-icons/palette.png" alt=""></div>
+            <div class="mind-prop mind-prop--dog"><img src="assets/orbit-icons/dog.png" alt=""></div>
+            <div class="mind-prop mind-prop--app"><img src="assets/orbit-icons/procreate.png" alt=""></div>
+            <div class="mind-prop mind-prop--snow"><img src="assets/orbit-icons/snowboard.png" alt=""></div>
+          </div>
+          <div class="mind-lower"><img src="assets/draft/torn-paper-head-dark.png" alt="" width="1164" height="1351" fetchpriority="high"></div>
+          <svg class="mind-rim" viewBox="0 0 1164 1351" aria-hidden="true"><path class="mind-rim__under" d="M165.00 499.43 L170.07 499.25 L173.92 501.21 L178.03 502.56 L181.46 498.76 L185.21 502.21 L191.77 503.57 L196.79 500.70 L201.35 500.22 L204.97 503.76 L209.29 505.74 L212.32 503.53 L217.22 503.57 L222.09 501.28 L225.57 505.61 L230.22 502.59 L235.01 502.96 L240.87 503.97 L247.06 500.59 L253.65 501.17 L260.02 503.81 L265.66 498.45 L269.30 500.10 L273.55 500.94 L279.66 501.63 L284.21 498.55 L289.78 498.90 L296.36 499.93 L299.72 499.05 L302.98 497.86 L309.02 499.00 L314.14 499.79 L319.40 499.44 L323.31 498.02 L328.74 501.20 L334.08 497.92 L337.92 500.30 L343.50 499.66 L348.19 498.39 L352.38 501.73 L357.88 497.30 L363.82 500.01 L367.68 497.93 L373.64 497.40 L378.15 501.47 L383.39 496.75 L388.22 498.08 L392.54 495.83 L397.52 494.90 L402.04 494.55 L408.38 494.64 L415.01 493.01 L421.96 489.85 L427.98 488.59 L431.22 487.26 L435.74 486.27 L440.58 486.16 L444.43 488.02 L450.41 488.45 L457.17 488.08 L463.15 483.80 L468.16 484.33 L472.58 480.42 L478.81 477.51 L484.39 477.97 L488.93 473.40 L492.69 476.50 L498.02 473.47 L503.86 470.66 L510.80 469.22 L515.69 471.04 L519.20 469.62 L522.48 471.10 L528.41 466.07 L533.22 467.57 L536.31 470.35 L540.77 468.37 L547.12 465.47 L552.55 464.56 L557.91 464.46 L563.71 464.53 L568.07 462.16 L574.67 461.22 L579.52 461.91 L585.25 460.73 L591.14 457.09 L594.46 458.85 L600.40 458.27 L605.48 456.12 L608.84 455.76 L612.10 460.06 L617.78 459.82 L621.48 457.07 L628.06 461.78 L632.63 457.76 L639.45 460.71 L644.82 458.80 L648.79 459.75 L654.59 462.04 L659.77 464.61 L666.67 463.33 L672.67 464.16 L676.90 462.36 L680.11 463.61 L683.63 462.23 L690.53 462.32 L696.87 464.22 L702.64 465.53 L709.16 465.19 L713.76 468.79 L720.35 468.58 L726.59 473.01 L731.74 472.83 L738.63 473.51 L745.03 473.81 L751.89 474.35 L756.60 472.22 L760.52 476.21 L765.96 472.55 L771.19 475.37 L776.15 472.52 L783.02 474.83 L788.12 471.67 L791.31 471.09 L798.10 467.59 L802.96 470.19 L807.28 469.97 L813.14 466.78 L820.14 468.05 L824.38 470.44 L827.86 466.02 L834.85 465.85 L840.39 466.59 L846.31 460.77 L851.09 458.05 L855.59 457.20 L860.43 456.06 L865.57 455.97 L870.24 453.85 L876.56 451.63 L882.00 452.95 L887.40 448.34 L894.03 448.78 L900.47 450.61 L906.37 447.64 L913.03 449.04 L919.22 448.13 L922.47 443.78 L929.36 443.18 L933.12 442.79 L937.30 444.69 L941.40 445.52 L945.03 442.97 L948.17 441.56 L952.38 442.96 L956.51 442.10 L962.99 444.60 L968.78 441.03 L975.26 440.49 L978.59 439.22 L984.42 442.20 L988.81 439.40 L994.56 438.67 L1000.42 440.96 L1005.68 437.97 L1008.00 440.00"/><path class="mind-rim__paper" d="M165.00 499.43 L170.07 499.25 L173.92 501.21 L178.03 502.56 L181.46 498.76 L185.21 502.21 L191.77 503.57 L196.79 500.70 L201.35 500.22 L204.97 503.76 L209.29 505.74 L212.32 503.53 L217.22 503.57 L222.09 501.28 L225.57 505.61 L230.22 502.59 L235.01 502.96 L240.87 503.97 L247.06 500.59 L253.65 501.17 L260.02 503.81 L265.66 498.45 L269.30 500.10 L273.55 500.94 L279.66 501.63 L284.21 498.55 L289.78 498.90 L296.36 499.93 L299.72 499.05 L302.98 497.86 L309.02 499.00 L314.14 499.79 L319.40 499.44 L323.31 498.02 L328.74 501.20 L334.08 497.92 L337.92 500.30 L343.50 499.66 L348.19 498.39 L352.38 501.73 L357.88 497.30 L363.82 500.01 L367.68 497.93 L373.64 497.40 L378.15 501.47 L383.39 496.75 L388.22 498.08 L392.54 495.83 L397.52 494.90 L402.04 494.55 L408.38 494.64 L415.01 493.01 L421.96 489.85 L427.98 488.59 L431.22 487.26 L435.74 486.27 L440.58 486.16 L444.43 488.02 L450.41 488.45 L457.17 488.08 L463.15 483.80 L468.16 484.33 L472.58 480.42 L478.81 477.51 L484.39 477.97 L488.93 473.40 L492.69 476.50 L498.02 473.47 L503.86 470.66 L510.80 469.22 L515.69 471.04 L519.20 469.62 L522.48 471.10 L528.41 466.07 L533.22 467.57 L536.31 470.35 L540.77 468.37 L547.12 465.47 L552.55 464.56 L557.91 464.46 L563.71 464.53 L568.07 462.16 L574.67 461.22 L579.52 461.91 L585.25 460.73 L591.14 457.09 L594.46 458.85 L600.40 458.27 L605.48 456.12 L608.84 455.76 L612.10 460.06 L617.78 459.82 L621.48 457.07 L628.06 461.78 L632.63 457.76 L639.45 460.71 L644.82 458.80 L648.79 459.75 L654.59 462.04 L659.77 464.61 L666.67 463.33 L672.67 464.16 L676.90 462.36 L680.11 463.61 L683.63 462.23 L690.53 462.32 L696.87 464.22 L702.64 465.53 L709.16 465.19 L713.76 468.79 L720.35 468.58 L726.59 473.01 L731.74 472.83 L738.63 473.51 L745.03 473.81 L751.89 474.35 L756.60 472.22 L760.52 476.21 L765.96 472.55 L771.19 475.37 L776.15 472.52 L783.02 474.83 L788.12 471.67 L791.31 471.09 L798.10 467.59 L802.96 470.19 L807.28 469.97 L813.14 466.78 L820.14 468.05 L824.38 470.44 L827.86 466.02 L834.85 465.85 L840.39 466.59 L846.31 460.77 L851.09 458.05 L855.59 457.20 L860.43 456.06 L865.57 455.97 L870.24 453.85 L876.56 451.63 L882.00 452.95 L887.40 448.34 L894.03 448.78 L900.47 450.61 L906.37 447.64 L913.03 449.04 L919.22 448.13 L922.47 443.78 L929.36 443.18 L933.12 442.79 L937.30 444.69 L941.40 445.52 L945.03 442.97 L948.17 441.56 L952.38 442.96 L956.51 442.10 L962.99 444.60 L968.78 441.03 L975.26 440.49 L978.59 439.22 L984.42 442.20 L988.81 439.40 L994.56 438.67 L1000.42 440.96 L1005.68 437.97 L1008.00 440.00"/><path class="mind-rim__fibers" d="M165.00 500.43l-1.84 -5.25 M173.92 502.21l0.31 -5.29 M181.46 499.76l0.13 -6.85 M191.77 504.57l0.35 -5.64 M201.35 501.22l-1.21 -4.46 M209.29 506.74l-1.03 -5.90 M217.22 504.57l0.80 -4.47 M225.57 506.61l-0.81 -2.21 M235.01 503.96l1.37 -4.33 M247.06 501.59l-0.42 -6.28 M260.02 504.81l-0.94 -3.15 M269.30 501.10l-0.94 -2.25 M279.66 502.63l0.82 -2.52 M289.78 499.90l-0.32 -5.27 M299.72 500.05l0.18 -3.60 M309.02 500.00l-1.06 -5.84 M319.40 500.44l0.43 -2.12 M328.74 502.20l-0.19 -4.86 M337.92 501.30l-0.42 -4.75 M348.19 499.39l-0.24 -5.74 M357.88 498.30l-1.15 -6.07 M367.68 498.93l1.21 -6.20 M378.15 502.47l1.60 -2.05 M388.22 499.08l-1.38 -3.56 M397.52 495.90l-1.57 -6.83 M408.38 495.64l-1.41 -3.50 M421.96 490.85l-0.66 -6.09 M431.22 488.26l-1.74 -3.82 M440.58 487.16l-1.30 -6.42 M450.41 489.45l0.28 -5.60 M463.15 484.80l-0.14 -6.47 M472.58 481.42l-0.20 -5.69 M484.39 478.97l-0.78 -6.70 M492.69 477.50l-0.43 -5.51 M503.86 471.66l-1.41 -6.07 M515.69 472.04l-1.29 -2.64 M522.48 472.10l-0.42 -5.04 M533.22 468.57l1.29 -2.62 M540.77 469.37l-1.04 -5.59 M552.55 465.56l0.05 -4.88 M563.71 465.53l0.68 -5.27 M574.67 462.22l-0.30 -2.84 M585.25 461.73l1.39 -3.38 M594.46 459.85l0.92 -4.56 M605.48 457.12l-0.67 -3.89 M612.10 461.06l-0.45 -6.46 M621.48 458.07l1.37 -5.60 M632.63 458.76l0.19 -3.90 M644.82 459.80l-0.04 -6.70 M654.59 463.04l0.48 -3.88 M666.67 464.33l0.91 -6.75 M676.90 463.36l-0.49 -5.97 M683.63 463.23l-0.29 -5.67 M696.87 465.22l0.56 -4.16 M709.16 466.19l1.24 -5.40 M720.35 469.58l-0.50 -3.45 M731.74 473.83l-1.29 -6.12 M745.03 474.81l-0.79 -6.30 M756.60 473.22l0.64 -5.34 M765.96 473.55l-0.75 -5.09 M776.15 473.52l-0.39 -4.24 M788.12 472.67l-0.77 -3.44 M798.10 468.59l1.69 -6.97 M807.28 470.97l-0.98 -4.99 M820.14 469.05l0.37 -4.91 M827.86 467.02l0.24 -4.82 M840.39 467.59l-0.36 -4.02 M851.09 459.05l-1.74 -4.79 M860.43 457.06l0.31 -4.83 M870.24 454.85l-0.83 -5.51 M882.00 453.95l0.07 -5.62 M894.03 449.78l0.78 -3.53 M906.37 448.64l-0.61 -5.98 M919.22 449.13l-1.78 -4.06 M929.36 444.18l1.83 -3.65 M937.30 445.69l-0.72 -5.43 M945.03 443.97l-1.25 -4.39 M952.38 443.96l-0.11 -2.86 M962.99 445.60l1.16 -5.38 M975.26 441.49l-0.97 -5.44 M984.42 443.20l-1.51 -4.17 M994.56 439.67l1.36 -6.35 M1005.68 438.97l1.17 -6.46"/></svg>
+          <div class="mind-cap" aria-hidden="true"><div class="mind-cap__front"><img src="assets/draft/torn-paper-head-dark.png" alt="" width="1164" height="1351"></div><div class="mind-cap__back"></div></div>
+        </div>
       </div>
-      <div id="about" class="home-banner__content">
-        <h1 id="home-intro-title">
-          <span class="home-banner__greeting">Hi, I'm Shiran,</span>
-          <span class="home-banner__statement">an illustrator working at the intersection of narrative, material, and process.</span>
-        </h1>
-        <p class="home-banner__description">Illustration undergraduate, trained in visual narrative and character design. I work across traditional media, digital painting, and generative code, approaching each project through iteration — sketch, critique, revise.</p>
-        <a class="home-banner__scroll" href="#footer-placeholder" aria-label="Scroll down">
-          <svg class="bi bi-arrow-down" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
-          </svg>
-        </a>
+      <a class="mind-corner-card" href="#selected"><span>A peek inside</span><strong>My sketchbook ↗</strong><img src="assets/gallery/alexo8.webp" alt="Snowy neighbourhood illustration"></a>
+      <a class="mind-scroll" href="#selected">Explore my work <span aria-hidden="true">↓</span></a>
+      <div class="mind-controls"><button id="replay" type="button" aria-label="Replay entrance animation">Replay intro ?</button><button id="mind-toggle" type="button" aria-pressed="false">Close the paper ↗</button><span aria-hidden="true">01 / 01</span></div>
+    </section>
+    <section class="home-paper" aria-labelledby="work-title">
+      <div class="home-paper__sticky">
+        <div class="home-paper__destination draft-container">
+          <p class="draft-eyebrow">Illustration · Narrative · Exploration</p>
+          <h2 id="work-title" class="draft-heading">A world worth<br>looking closer at.</h2>
+        </div>
+        <svg class="home-paper__canvas" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <filter id="home-paper-grain" x="0" y="0" width="100%" height="100%">
+              <feTurbulence type="fractalNoise" baseFrequency=".065 .11" numOctaves="3" seed="17" result="grain"/>
+              <feColorMatrix in="grain" type="saturate" values="0"/>
+              <feComponentTransfer><feFuncR type="linear" slope=".2" intercept=".78"/><feFuncG type="linear" slope=".19" intercept=".77"/><feFuncB type="linear" slope=".17" intercept=".73"/></feComponentTransfer>
+              <feComposite in2="SourceGraphic" operator="in"/>
+              <feBlend in2="SourceGraphic" mode="multiply"/>
+            </filter>
+            <linearGradient id="home-paper-curl" x1="0" y1="0" x2="1" y2=".55">
+              <stop offset="0" stop-color="#fcf9f3"/><stop offset=".4" stop-color="#fcf9f3"/><stop offset=".72" stop-color="#dedbd2"/><stop offset="1" stop-color="#8b9292"/>
+            </linearGradient>
+            <filter id="home-paper-shadow" x="-100%" y="-50%" width="300%" height="250%"><feGaussianBlur stdDeviation="20"/></filter>
+          </defs>
+          <path class="home-paper__shadow" filter="url(#home-paper-shadow)"/>
+          <path class="home-paper__sheet"/>
+          <path class="home-paper__edge" filter="url(#home-paper-grain)"/>
+          <path class="home-paper__curl" fill="url(#home-paper-curl)"/>
+          <path class="home-paper__curl-edge" filter="url(#home-paper-grain)"/>
+          <path class="home-paper__fibers"/>
+        </svg>
       </div>
     </section>
+    <section class="draft-work draft-container" id="selected" aria-labelledby="work-title">
+      <div class="draft-section-label" data-reveal><span>01 / Selected illustrations</span><span>Made with curiosity</span></div>
+      <div class="draft-grid">
+        <a class="draft-art" href="assets/gallery/alexo8.webp" data-artwork data-caption="Snowy neighbourhood landscape painting" data-reveal><div class="draft-art__paper"><img src="assets/gallery/alexo8.webp" alt="Snowy neighbourhood landscape painting" loading="lazy"><span class="draft-fold" aria-hidden="true"></span><span class="draft-art__open" aria-hidden="true">↗</span></div><div class="draft-art__label"><h3>Quiet surroundings</h3><span>01 / Illustration</span></div></a>
+        <a class="draft-art" href="assets/gallery/alexo4.webp" data-artwork data-caption="Three figures in a futuristic architectural space" data-reveal><div class="draft-art__paper"><img src="assets/gallery/alexo4.webp" alt="Three figures in a futuristic architectural space" loading="lazy"><span class="draft-fold" aria-hidden="true"></span><span class="draft-art__open" aria-hidden="true">↗</span></div><div class="draft-art__label"><h3>Somewhere beyond</h3><span>02 / Illustration</span></div></a>
+        <a class="draft-art" href="assets/gallery/alexo2.webp" data-artwork data-caption="Portrait surrounded by water and jellyfish" data-reveal><div class="draft-art__paper"><img src="assets/gallery/alexo2.webp" alt="Portrait surrounded by water and jellyfish" loading="lazy"><span class="draft-fold" aria-hidden="true"></span><span class="draft-art__open" aria-hidden="true">↗</span></div><div class="draft-art__label"><h3>Under the surface</h3><span>03 / Illustration</span></div></a>
+        <a class="draft-art" href="assets/gallery/alexo13.webp" data-artwork data-caption="Colourful lantern and koi composition" data-reveal><div class="draft-art__paper"><img src="assets/gallery/alexo13.webp" alt="Colourful lantern and koi composition" loading="lazy"><span class="draft-fold" aria-hidden="true"></span><span class="draft-art__open" aria-hidden="true">↗</span></div><div class="draft-art__label"><h3>Colour & possibility</h3><span>04 / Illustration</span></div></a>
+      </div>
+      <a href="gallery.html" class="btn btn-outline-primary" data-reveal>Explore the gallery ↗</a>
+    </section>
+    <section class="draft-about" id="about-draft" aria-labelledby="about-title">
+      <svg class="draft-tear" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0 55 L35 45 70 62 104 41 151 51 190 32 229 49 265 27 310 40 345 24 398 44 441 26 485 38 530 22 575 37 620 19 661 35 715 16 760 31 801 13 845 29 890 19 935 39 980 26 1020 45 1065 34 1110 55 1155 40 1190 61 1230 49 1270 66 1320 55 1380 74 1440 61 V110 H0Z"/></svg>
+      <div class="draft-container draft-about__inner">
+        <p class="draft-eyebrow" data-reveal>02 / A little about my practice</p>
+        <h2 id="about-title" class="draft-heading"><span class="draft-line" data-reveal><span>It starts with a sketch.</span></span><span class="draft-line" data-reveal><span>And a little <button class="draft-curiosity" type="button">curiosity<span aria-hidden="true">↗</span></button>.</span></span></h2>
+        <div class="draft-about__bottom"><span class="draft-about__asterisk" aria-hidden="true">✳</span><p data-reveal>I'm an illustration undergraduate exploring visual narrative and character design. Traditional media, digital painting, and generative code are all part of the process.<br><br>Sketch, critique, revise. Then see where the next idea takes me.</p></div>
+      </div>
+      <img class="draft-follower" src="assets/orbit-icons/palette.png" alt="" aria-hidden="true">
+    </section>
   </main>
-
   <div id="footer-placeholder" data-depth="0"></div>
-
+  <dialog class="draft-dialog" aria-labelledby="draft-dialog-title"><button class="draft-dialog__close" type="button" aria-label="Close artwork">×</button><img src="" alt=""><h2 id="draft-dialog-title"></h2></dialog>
   <script src="js/vendor/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/work-orbit.js"></script>
 </body>
 </html>

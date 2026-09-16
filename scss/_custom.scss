@@ -74,11 +74,6 @@ main {
   font-family: $font-family-sans-serif;
   padding-block: 0.75rem;
 
-  a {
-    pointer-events: none;
-    cursor: default;
-  }
-
   > .container {
     max-width: 1800px;
     position: relative;

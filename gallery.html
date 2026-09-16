@@ -14,13 +14,49 @@
 
   <div id="navbar-placeholder" data-depth="0"></div>
 
-  <main class="container">
-    <h1>Gallery</h1>
+  <main class="container gallery-page">
+    <section class="gallery-banner" aria-labelledby="gallery-title">
+      <h1 id="gallery-title">Gallery</h1>
+      <p class="gallery-banner__lead"><strong>A collection of course projects, personal illustrations, sketches, and visual experiments.</strong></p>
+      <div class="gallery-banner__copy">
+        <p>This gallery brings together work created both in and beyond the classroom. Some pieces began with a design brief or assignment, while others grew from everyday observations, imagined stories, and questions I wanted to explore visually.</p>
+        <p>Across these works, I experiment with storytelling, character, colour, composition, and the relationship between people and their surroundings.</p>
+      </div>
+      <p class="gallery-banner__categories"><strong>Course Work · Personal Illustration · Sketches · Visual Experiments</strong></p>
+
+    </section>
+
+    <section class="artwork-gallery" aria-label="Illustration gallery">
+      <div class="gallery-section-heading">
+        <h2>My Colour Illustrations &amp; Thoughts</h2>
+        <p><em>Click to see details.</em></p>
+      </div>
+      <button class="artwork-card artwork-card--wide" type="button" data-title="Artwork 03"><img src="assets/gallery/alexo3.webp" alt="Architectural environment illustration" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 04"><img src="assets/gallery/alexo4.webp" alt="Three figures in a futuristic architectural space" loading="lazy"></button>
+      <button class="artwork-card artwork-card--wide" type="button" data-title="Artwork 05"><img src="assets/gallery/alexo5.webp" alt="Detailed monochrome interior drawing" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 08"><img src="assets/gallery/alexo8.webp" alt="Snowy neighbourhood landscape painting" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 14"><img src="assets/gallery/alexo14.webp" alt="Urban scene with figures and layered numbers" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 01"><img src="assets/gallery/alexo1.webp" alt="Expressive multi-figure self portrait" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 02"><img src="assets/gallery/alexo2.webp" alt="Portrait surrounded by water and jellyfish" loading="lazy"></button>
+      <button class="artwork-card artwork-card--wide" type="button" data-title="Artwork 06"><img src="assets/gallery/alexo6.webp" alt="Crowded speculative city illustration" loading="lazy"></button>
+      <button class="artwork-card artwork-card--wide" type="button" data-title="Artwork 07"><img src="assets/gallery/alexo7.webp" alt="Watercolour painting of a red rural building" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 09"><img src="assets/gallery/alexo9.webp" alt="Museum-inspired surreal composition" loading="lazy"></button>
+      <button class="artwork-card artwork-card--wide" type="button" data-title="Artwork 10"><img src="assets/gallery/alexo10.webp" alt="Figure holding a globe between contrasting landscapes" loading="lazy"></button>
+      <button class="artwork-card artwork-card--wide" type="button" data-title="Artwork 12"><img src="assets/gallery/alexo12.webp" alt="Graphite still life study" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 13"><img src="assets/gallery/alexo13.webp" alt="Colourful lantern and koi composition" loading="lazy"></button>
+      <button class="artwork-card" type="button" data-title="Artwork 8865"><img src="assets/gallery/artwork-8865.webp" alt="Illustration artwork" loading="lazy"></button>
+    </section>
+
+    <dialog class="artwork-dialog" aria-labelledby="artwork-dialog-title">
+      <button class="artwork-dialog__close" type="button" aria-label="Close artwork">×</button>
+      <figure><img class="artwork-dialog__image" src="" alt=""><figcaption><h2 id="artwork-dialog-title"></h2><p>Sketches, process notes, and annotations will be added here.</p></figcaption></figure>
+    </dialog>
   </main>
 
   <div id="footer-placeholder" data-depth="0"></div>
 
   <script src="js/vendor/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>
