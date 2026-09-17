@@ -22,7 +22,16 @@ function loadComponent(placeholderId, componentPath) {
     })
         .catch((err) => console.error("Failed to load component:", componentPath, err));
 }
+function playPageEntrance() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+        return;
+    document.body.classList.add("page-fade-in-up");
+    document.body.addEventListener("animationend", () => {
+        document.body.classList.remove("page-fade-in-up");
+    }, { once: true });
+}
 document.addEventListener("DOMContentLoaded", () => {
+    playPageEntrance();
     loadComponent("navbar-placeholder", "components/navbar.html");
     loadComponent("footer-placeholder", "components/footer.html").then(() => {
         const yearEl = document.getElementById("year");

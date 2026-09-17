@@ -110,6 +110,12 @@
     gazeFrame = 0;
     setGaze('center');
   }
+  function isInsidePortrait(point) {
+    const portrait = hero.querySelector('.mind-portrait');
+    const rect = portrait.getBoundingClientRect();
+    return point.x >= rect.left && point.x <= rect.right &&
+      point.y >= rect.top && point.y <= rect.bottom;
+  }
   function updateGaze() {
     gazeFrame = 0;
     if (!pointer) return;
@@ -133,6 +139,12 @@
   document.addEventListener('pointermove', event => {
     if (!finePointer.matches || event.pointerType === 'touch') return;
     pointer = { x: event.clientX, y: event.clientY };
+    if (isInsidePortrait(pointer)) {
+      cancelAnimationFrame(gazeFrame);
+      gazeFrame = 0;
+      setGaze('center');
+      return;
+    }
     if (!gazeFrame) gazeFrame = requestAnimationFrame(updateGaze);
   }, { passive: true });
   document.documentElement.addEventListener('pointerleave', resetGaze);
@@ -178,22 +190,24 @@
     cancelAnimationFrame(followerFrame);
     follower.classList.remove('is-visible');
   }
-  curiosity.addEventListener('pointermove', event => {
-    if (finePointer.matches) showFollower(event.clientX, event.clientY);
-  });
-  curiosity.addEventListener('pointerleave', hideFollower);
-  curiosity.addEventListener('focus', () => {
-    const rect = curiosity.getBoundingClientRect();
-    showFollower(Math.min(rect.right, innerWidth - 160), rect.top);
-  });
-  curiosity.addEventListener('blur', hideFollower);
-  curiosity.addEventListener('click', () => {
-    if (followerActive) hideFollower();
-    else {
+  if (curiosity) {
+    curiosity.addEventListener('pointermove', event => {
+      if (finePointer.matches) showFollower(event.clientX, event.clientY);
+    });
+    curiosity.addEventListener('pointerleave', hideFollower);
+    curiosity.addEventListener('focus', () => {
       const rect = curiosity.getBoundingClientRect();
       showFollower(Math.min(rect.right, innerWidth - 160), rect.top);
-    }
-  });
+    });
+    curiosity.addEventListener('blur', hideFollower);
+    curiosity.addEventListener('click', () => {
+      if (followerActive) hideFollower();
+      else {
+        const rect = curiosity.getBoundingClientRect();
+        showFollower(Math.min(rect.right, innerWidth - 160), rect.top);
+      }
+    });
+  }
   document.addEventListener('visibilitychange', () => { if (document.hidden) hideFollower(); });
   finePointer.addEventListener('change', hideFollower);
 
