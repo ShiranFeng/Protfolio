@@ -13753,40 +13753,6 @@ main {
   color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #ffffff;
-    background-color: #324a5f;
-  }
-  .site-header,
-  .site-header .dropdown-menu {
-    background-color: #324a5f;
-  }
-  .site-header > .container::after {
-    background-color: #ffffff;
-  }
-  .site-header .navbar-brand img,
-  .site-header .navbar-toggler-icon {
-    filter: invert(1);
-  }
-  .site-header .navbar-toggler {
-    border-color: #ffffff;
-  }
-  .site-header .nav-link,
-  .site-header .dropdown-item,
-  main a {
-    color: #ffffff;
-  }
-  .site-header .nav-link:hover,
-  .site-header .nav-link:focus-visible,
-  .site-header .dropdown-item:hover,
-  .site-header .dropdown-item:focus,
-  main a:hover,
-  main a:focus-visible {
-    color: #0c1821;
-  }
-}
-
 .work-page {
   max-width: 1800px;
 }
