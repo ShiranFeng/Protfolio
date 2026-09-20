@@ -1,14 +1,56 @@
 (() => {
   'use strict';
 
-  const hero = document.querySelector('.mind-hero');
+  const hero = document.querySelector('.orbit-hero');
   if (!hero) return;
 
-  // The portrait's torn-paper cap is the only motion retained on the homepage.
-  const revealPortrait = () => requestAnimationFrame(() => hero.classList.add('is-open'));
-  if (document.readyState === 'loading') {
-    addEventListener('load', revealPortrait, { once: true });
-  } else {
-    revealPortrait();
+  const icons = [...hero.querySelectorAll('.orbit-icon')];
+  const tracks = [
+    { rx: 275, ry: 85, tilt: -.18, speed: .14 },
+    { rx: 340, ry: 140, tilt: -.18, speed: .14 },
+    { rx: 410, ry: 195, tilt: -.18, speed: .14 }
+  ];
+  const point = (track, angle) => {
+    const x = track.rx * Math.cos(angle), y = track.ry * Math.sin(angle);
+    return [500 + x * Math.cos(track.tilt) - y * Math.sin(track.tilt),
+      365 + x * Math.sin(track.tilt) + y * Math.cos(track.tilt)];
+  };
+  for (const track of tracks) {
+    for (const front of [false, true]) {
+      const start = front ? 0 : Math.PI;
+      const points = Array.from({ length: 81 }, (_, i) => point(track, start + i / 80 * Math.PI));
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', points.map(([x,y], i) => `${i ? 'L' : 'M'}${x},${y}`).join(' '));
+      hero.querySelector(front ? '.orbit-lines--front' : '.orbit-lines--back').append(path);
+    }
   }
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const button = hero.querySelector('.orbit-pause');
+  let paused = reduced.matches, visible = true, elapsed = 0, last = 0, frame = 0;
+  const draw = () => icons.forEach((icon, index) => {
+    const track = tracks[Number(icon.dataset.orbit)];
+    // Equal angular spacing and speed keep the six icons from bunching up.
+    const angle = index * Math.PI / 3 - .35 - elapsed * track.speed;
+    const [x,y] = point(track, angle);
+    icon.style.left = `${x / 10}%`;
+    icon.style.top = `${y / 6.5}%`;
+    icon.style.zIndex = Math.sin(angle) >= 0 ? '5' : '2';
+  });
+  const tick = time => {
+    frame = 0;
+    if (paused || !visible || document.hidden) { last = 0; return; }
+    if (last) elapsed += Math.min(50, time - last) / 1000;
+    last = time; draw(); frame = requestAnimationFrame(tick);
+  };
+  const sync = () => {
+    cancelAnimationFrame(frame); frame = 0; last = 0;
+    button.textContent = paused ? 'Play orbits' : 'Pause orbits';
+    button.setAttribute('aria-pressed', String(paused));
+    if (!paused && visible && !document.hidden) frame = requestAnimationFrame(tick);
+  };
+  button.addEventListener('click', () => { paused = !paused; sync(); });
+  reduced.addEventListener('change', () => { paused = reduced.matches; sync(); });
+  document.addEventListener('visibilitychange', sync);
+  new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }).observe(hero);
+  draw(); sync();
 })();
