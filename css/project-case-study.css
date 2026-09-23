@@ -1,0 +1,9 @@
+.case-study { max-width: 58rem; padding-block: clamp(2rem, 6vw, 5rem); }
+.case-intro { margin-bottom: clamp(3rem, 7vw, 5rem); }
+.case-study p { max-width: 68ch; font-size: 1.0625rem; line-height: 1.85; margin-bottom: 1.25rem; }
+.case-chapter { padding-block: clamp(2rem, 5vw, 3.5rem); border-top: 1px solid rgba(12, 24, 33, .18); }
+.case-study .case-stage { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+.case-chapter h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1.5rem; line-height: 1.15; }
+.case-chapter h3 { font-family: Archivo, sans-serif; font-size: 1.125rem; font-weight: 700; margin: 2rem 0 .75rem; }
+.case-copy > :first-child { margin-top: 0; }
+.case-copy > :last-child { margin-bottom: 0; }

@@ -6,9 +6,9 @@
 
   const icons = [...hero.querySelectorAll('.orbit-icon')];
   const tracks = [
-    { rx: 275, ry: 85, tilt: -.18, speed: .14 },
-    { rx: 340, ry: 140, tilt: -.18, speed: .14 },
-    { rx: 410, ry: 195, tilt: -.18, speed: .14 }
+    { rx: 245, ry: 92, tilt: -.48, speed: .14 },
+    { rx: 305, ry: 142, tilt: -.48, speed: .14 },
+    { rx: 365, ry: 192, tilt: -.48, speed: .14 }
   ];
   const point = (track, angle) => {
     const x = track.rx * Math.cos(angle), y = track.ry * Math.sin(angle);
@@ -26,15 +26,32 @@
   }
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const button = hero.querySelector('.orbit-pause');
-  let paused = reduced.matches, visible = true, elapsed = 0, last = 0, frame = 0;
+  let paused = reduced.matches, hovering = false, visible = true, elapsed = 0, last = 0, frame = 0;
   const draw = () => icons.forEach((icon, index) => {
     const track = tracks[Number(icon.dataset.orbit)];
-    // Equal angular spacing and speed keep the six icons from bunching up.
-    const angle = index * Math.PI / 3 - .35 - elapsed * track.speed;
+    // Equal angular spacing keeps the six icons from bunching up.
+    const movingAngle = index * Math.PI / 3 - .35 - elapsed * track.speed;
+    const angle = icon.matches(':hover') ? (icon._hoverAngle ?? movingAngle) : movingAngle;
     const [x,y] = point(track, angle);
     icon.style.left = `${x / 10}%`;
     icon.style.top = `${y / 6.5}%`;
     icon.style.zIndex = Math.sin(angle) >= 0 ? '5' : '2';
+  });
+  icons.forEach(icon => {
+    icon.setAttribute('role', 'link');
+    icon.setAttribute('tabindex', '0');
+    icon.setAttribute('aria-label', 'Open Gallery');
+    icon.addEventListener('click', () => { window.location.href = 'gallery.html'; });
+    icon.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href = 'gallery.html'; }
+    });
+    icon.addEventListener('pointerenter', () => {
+      const index = icons.indexOf(icon);
+      const track = tracks[Number(icon.dataset.orbit)];
+      icon._hoverAngle = index * Math.PI / 3 - .35 - elapsed * track.speed;
+      draw();
+    });
+    icon.addEventListener('pointerleave', () => { icon._hoverAngle = null; });
   });
   const tick = time => {
     frame = 0;
