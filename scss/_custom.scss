@@ -147,6 +147,25 @@ main {
     .navbar-nav {
       align-items: center;
     }
+
+    .nav-item.dropdown:hover > .dropdown-menu,
+    .nav-item.dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+
+    .nav-item.dropdown > .dropdown-menu {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .nav-item.dropdown > .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      border: 0;
+      padding-left: 0.5rem;
+      box-shadow: none;
+    }
   }
 }
 

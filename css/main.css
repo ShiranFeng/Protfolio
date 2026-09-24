@@ -13639,6 +13639,22 @@ main {
   .site-header .navbar-nav {
     align-items: center;
   }
+  .site-header .nav-item.dropdown:hover > .dropdown-menu,
+  .site-header .nav-item.dropdown:focus-within > .dropdown-menu {
+    display: block;
+  }
+  .site-header .nav-item.dropdown > .dropdown-menu {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .site-header .nav-item.dropdown > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    border: 0;
+    padding-left: 0.5rem;
+    box-shadow: none;
+  }
 }
 
 .site-footer {
