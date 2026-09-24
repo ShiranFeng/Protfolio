@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/project-case-study.css">
+  <link rel="stylesheet" href="baguio.css">
 </head>
 <body>
   <div id="navbar-placeholder" data-depth="2"></div>
@@ -28,22 +29,35 @@
     <section class="case-chapter" aria-labelledby="discover-title">
       <p class="case-stage">01 / Discover</p>
       <h2 id="discover-title">Finding the city beyond its landmarks</h2>
+      <div class="case-split">
       <div class="case-copy">
         <p>My city came with a built-in joke: Baguio, the "Summer Capital" of a tropical country — a whole city that exists because it's the one place that isn't hot. It sits in the Cordillera mountains, Ibaloi land long before anyone called it a hill station.</p>
         <p>The obvious poster writes itself — strawberry farm, pine trees, a cathedral. I didn't want to make that poster.</p>
+      </div>
+      <figure class="case-figure case-figure--discovery">
+        <img src="assets/discovery-moodboard.png" alt="A Baguio discovery board pairs photos of an underwater swimmer, forest canopy, bamboo walkway, mountain view, and strawberry with two vivid abstract colour studies." width="732" height="500" loading="lazy">
+        <figcaption>Fig. 1: A mood board built from Baguio’s colour, nature, and sense of movement—not its postcard landmarks.</figcaption>
+      </figure>
       </div>
     </section>
     <section class="case-chapter" aria-labelledby="define-title">
       <p class="case-stage">02 / Define</p>
       <h2 id="define-title">Draw the movement, not the monument</h2>
+      <div class="case-split">
       <div class="case-copy">
         <p>Most people get into Baguio via Kennon Road, a winding mountain highway with a giant Lion's Head statue partway up — locally, <em>Ulo ng Leon</em> — and it's not just scenery, it's a road people actually ride and race on.</p>
         <p>What stuck with me is that the road isn't a backdrop for locals — it's something they move through fast, on purpose, for fun. That energy is what got under my skin. I didn't want a poster of Baguio sitting still; I wanted that same feeling in the image. So instead of drawing a place, I drew motion: a figure riding something wave-shaped.</p>
+      </div>
+      <figure class="case-figure case-figure--define">
+        <img src="assets/define-compositions.png" alt="Three colourful sketch concepts explore Baguio through a purple figure in motion, a red bridge, green mountains, and wave-like lines." width="728" height="484" loading="lazy">
+        <figcaption>Fig. 2: Early compositions tested movement and waves as the visual direction for Baguio.</figcaption>
+      </figure>
       </div>
     </section>
     <section class="case-chapter" aria-labelledby="develop-title">
       <p class="case-stage">03 / Develop</p>
       <h2 id="develop-title">Three sketches, one direction</h2>
+      <div class="case-split">
       <div class="case-copy">
         <h3>Choosing the sketch</h3>
         <p>I brought three sketches into a one-on-one crit. Two got cut — my own read is that they didn't have the city's personality or any sense of movement in them. The one that survived was also, conveniently, my favorite already.</p>
@@ -51,10 +65,16 @@
         <p>The professor marked this version up directly on my Procreate file — a note on sizing, a note on text placement. That exact file is gone now — Procreate quietly clears undo history after a while, and the annotations went with it.</p>
         <p>My best guess: the sizing note rebalanced the figure against the wave so the motion reads as the main event; the text note moved "BAGUIO" out of a spot where it fought the artwork into one where both can be read cleanly.</p>
       </div>
+      <figure class="case-figure case-figure--develop">
+        <img src="assets/develop-critique.png" alt="A selected green, purple, and red poster sketch is shown beside red handwritten critique notes that point to the figure scale, balance, and placement of the word Baguio." width="734" height="488" loading="lazy">
+        <figcaption>Fig. 3: Critique feedback focused on figure scale, balance, and type placement so motion could lead the composition.</figcaption>
+      </figure>
+      </div>
     </section>
     <section class="case-chapter" aria-labelledby="deliver-title">
       <p class="case-stage">04 / Deliver</p>
       <h2 id="deliver-title">A feeling of passing through</h2>
+      <div class="case-split">
       <div class="case-copy">
         <p>The final poster doesn't wander far from the picked sketch — the notes were a tune-up, not a rebuild. One figure rides a purple wave-like shape across green, "BAGUIO" lettered in a soft, cloud-ish form above. No landmark anywhere in it — just a feeling of passing through the place.</p>
         <h3>A wave with a different mood</h3>
@@ -62,10 +82,29 @@
         <h3>Lettering you feel before you read</h3>
         <p>The cloud-like lettering borrows from 1960s psychedelic poster type, designed to be felt before it's read — which tracks for a city whose personality is fog and mountain curves rather than one photogenic thing.</p>
       </div>
+      <figure class="case-figure case-figure--deliver">
+        <img src="assets/final-poster.png" alt="The finished Baguio poster has a bright green field, cloud-like white Baguio lettering, a purple rider on a sweeping wave, and red bridge-like lines across the composition." width="732" height="478" loading="lazy">
+        <figcaption>Fig. 4: The final poster turns Baguio into a feeling of motion, freedom, and passing through.</figcaption>
+      </figure>
+      </div>
     </section>
   </main>
   <div id="footer-placeholder" data-depth="2"></div>
   <script src="../../js/vendor/bootstrap.bundle.min.js"></script>
   <script src="../../js/main.js"></script>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const figures = document.querySelectorAll('.case-figure');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      figures.forEach((figure) => observer.observe(figure));
+    }
+  </script>
 </body>
 </html>

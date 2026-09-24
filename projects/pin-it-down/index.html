@@ -20,23 +20,29 @@
     <section class="case-chapter" aria-labelledby="discover-title">
       <p class="case-stage">01 / Discover</p>
       <h2 id="discover-title">Two questions before the first sketch</h2>
+      <div class="case-split">
       <div class="case-copy"><p>Before I draw anything, the first questions I ask are always the same: who is this actually for, and where does it live culturally? This piece needed both answers fast — a badge/fridge magnet for Pizza Hut China, made for an internal design selection, needing to read as celebrating a specific region rather than a vague "Chinese-looking" pattern, while being legible to a much younger audience than I usually design for.</p></div>
       <figure class="case-figure">
         <img src="assets/discovery-framework.png" alt="A visual discovery board asks who the design is for and where it lives culturally, then identifies a gourd, panda, peacock motif, and Yunnan rice terraces as key references." width="588" height="591" loading="lazy">
         <figcaption>Fig. 1: Discovery framework grounding the brief in a young audience and specific Yunnan references before sketching.</figcaption>
       </figure>
+      </div>
     </section>    <section class="case-chapter" aria-labelledby="define-title">
       <p class="case-stage">02 / Define</p>
       <h2 id="define-title">A region, a symbol, an audience</h2>
+      <div class="case-split">
       <div class="case-copy"><h3>A wish built into the shape</h3><p>I built the shape around a gourd — <em>hulu</em> — because "gourd" and "fortune and prosperity" are a pun on each other in Chinese; the shape is already wishing the company well before anyone's parsed what's on it. A panda hugs the gourd: instantly readable as Chinese, and the hugging pose stands in for how the company treats people internally — helping each other, room for everyone. Gold trim frames it so it reads as auspicious on light or dark backgrounds.</p><h3>Making Yunnan specific</h3><p>The color and pattern lean into Yunnan — rice terrace tones, a peacock motif tied to Xishuangbanna and the Dai ethnic group's peacock dance.</p></div>
       <figure class="case-figure">
         <img src="assets/concept-research.png" alt="Four pencil studies show a panda embracing a gourd; annotated circles explain the gourd's good-fortune pun, peacock and folk motifs, and a palette inspired by Yunnan rice terraces." width="608" height="691" loading="lazy">
         <figcaption>Fig. 2: Early studies translated the concept into a gourd silhouette, peacock-inspired decoration, and a rice-terrace palette.</figcaption>
       </figure>
+      </div>
     </section>    <section class="case-chapter" aria-labelledby="develop-title">
       <p class="case-stage">03 / Develop</p>
       <h2 id="develop-title">The version I had to let go</h2>
+      <div class="case-split">
       <div class="case-copy"><p>The part I actually went back and forth on: the peacock feathers, first pass, had a lot of individual "eye" patterns I was a little proud of, plus window details on a building-like element. It looked good to me as illustration.</p><p>But I kept coming back to: would a kid actually <em>see</em> any of that? A five-year-old reacts to color and shape in the first half-second, or not at all.</p></div>
+      <div class="case-media-stack">
       <figure class="case-figure">
         <img src="assets/design-development.png" alt="A four-step development sequence moves from a loose pencil sketch of a gourd and panda, through refined linework and a colorful detailed version, to a final version with larger simplified color blocks." width="1119" height="687" loading="lazy">
         <figcaption>Fig. 3: The design became clearer as the silhouette, color blocks, and decorative zones were refined.</figcaption>
@@ -45,18 +51,35 @@
         <img src="assets/complex-first-draft.png" alt="A highly detailed gourd-shaped badge with a panda and Pizza Hut logo is annotated to show dense peacock-eye patterns, tiny building windows, and an overall composition that is difficult to read at small size." width="626" height="497" loading="lazy">
         <figcaption>Fig. 4: The richer first draft had more to discover, but its small details did not serve a quick, young-audience read.</figcaption>
       </figure>
+      </div>
+      </div>
     </section>    <section class="case-chapter" aria-labelledby="deliver-title">
       <p class="case-stage">04 / Deliver</p>
       <h2 id="deliver-title">Less detail, a clearer idea</h2>
+      <div class="case-split">
       <div class="case-copy"><p>So I talked myself out of the version I personally liked more, in favor of the one that did its job for its actual audience — stripped the peacock eyes, cut the window details, left bigger, more confident color blocks. Felt like a small loss at the time.</p><h3>What stayed with me</h3><p>What this one taught me: designing for a specific audience isn't the same as designing what you personally find most impressive. Region and audience aren't decoration added at the end — they're the two questions that should shape a concept from the first sketch.</p></div>
       <figure class="case-figure case-figure--final">
         <img src="assets/final-magnet-mockup.png" alt="The finished gold-edged fridge magnet is attached to a white refrigerator. A panda hugs the lower half of a colorful gourd decorated with a peacock, geometric patterns, and a red Pizza Hut logo." width="1448" height="1086" loading="lazy">
         <figcaption>Fig. 5: Final magnet mockup — a bold, tactile object whose core idea remains legible at a glance.</figcaption>
       </figure>
+      </div>
     </section>
   </main>
   <div id="footer-placeholder" data-depth="2"></div>
   <script src="../../js/vendor/bootstrap.bundle.min.js"></script>
   <script src="../../js/main.js"></script>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      document.querySelectorAll('.case-figure').forEach((figure) => observer.observe(figure));
+    }
+  </script>
 </body>
 </html>

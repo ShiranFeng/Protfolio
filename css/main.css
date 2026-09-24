@@ -14138,7 +14138,7 @@ main {
 
 .project-detail h1 {
   margin-bottom: 1.5rem;
-  font-size: clamp(3.5rem, 9vw, 9rem);
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 .project-detail > p:last-child {

@@ -5,11 +5,6 @@
   align-items: start;
 }
 
-.case-media-stack {
-  display: grid;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-}
-
 .case-figure {
   margin: 0;
   opacity: 0;
@@ -36,15 +31,23 @@
   line-height: 1.5;
 }
 
-.case-figure--final {
+.case-figure--deliver {
   padding-bottom: .65rem;
-  border-bottom: .35rem solid #dcae32;
+  border-bottom: .4rem solid transparent;
+  border-image: linear-gradient(90deg, #00b95c 0 46%, #f05b25 46% 68%, #a72bea 68% 100%) 1;
 }
 
 @media (max-width: 767px) {
-  .case-split { grid-template-columns: 1fr; gap: 1.5rem; }
+  .case-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .case-figure { opacity: 1; transform: none; transition: none; }
+  .case-figure {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
