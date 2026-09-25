@@ -11,7 +11,7 @@
       ? [{ opacity: 0 }, { opacity: 1 }]
       : [{ opacity: 0, transform: `translateY(${distance}px)` }, { opacity: 1, transform: 'translateY(0)' }];
     const animation = element.animate(frames, {
-      duration: 700, delay, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards'
+      duration: 1000, delay, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards'
     });
     animations.add(animation);
     animation.onfinish = () => animations.delete(animation);
@@ -25,12 +25,12 @@
       if (reduced.matches) continue;
       const section = entry.target;
       const heading = section.querySelector('h2');
-      if (heading) entrance(heading, 0, 22);
-      section.querySelectorAll(':scope > div:first-child p').forEach((p, i) => entrance(p, 140 + i * 100, 16));
+      if (heading) entrance(heading, 0, 44);
+      section.querySelectorAll(':scope > div:first-child p').forEach((p, i) => entrance(p, 220 + i * 140, 32));
       // The carousel owns its card transforms, so fade its cards without moving them.
-      section.querySelectorAll('.home-gallery-card').forEach((card, i) => entrance(card, 230 + i * 45, 0, true));
+      section.querySelectorAll('.home-gallery-card').forEach((card, i) => entrance(card, 340 + i * 65, 0, true));
       const controls = section.querySelector('.home-gallery-controls');
-      if (controls) entrance(controls, 420, 10);
+      if (controls) entrance(controls, 600, 20);
     }
   }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
 
