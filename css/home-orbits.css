@@ -11,4 +11,32 @@
 .orbit-icon { position: absolute; width: 12%; height: 18%; object-fit: contain; transform: translate(-50%, -50%); filter: drop-shadow(0 5px 7px #0005); cursor: pointer; pointer-events: auto; transition: filter .2s ease, scale .2s ease; }
 .orbit-icon:hover, .orbit-icon:focus-visible { scale: 1.04; filter: drop-shadow(0 6px 8px #0006); outline: none; }
 .orbit-pause { color: inherit; background: transparent; border: 1px solid #ffffff60; border-radius: 2rem; padding: .5rem 1rem; font-size: .75rem; }
+.home-space-scene { position: relative; isolation: isolate; background: var(--bs-secondary); }
+.home-space-scene .orbit-hero { overflow: visible; background: transparent; z-index: 1; }
+.home-space-scene #about { background: transparent; }
+.home-space-scene #about > div { position: relative; z-index: 2; }
+.star-stage { width: 100%; aspect-ratio: 1440 / 780; min-height: min(78vw, 819px); margin-top: 1rem; }
+.orbit-system { position: absolute; left: 50%; top: 0; width: min(100%, 1050px); aspect-ratio: 1000 / 650; transform: translateX(-50%); isolation: isolate; }
+.star-stage .orbit-astronaut { width: 47%; top: 4%; animation: astronaut-float 6s ease-in-out infinite; }
+@keyframes astronaut-float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .star-stage .orbit-astronaut { animation: none; }
+}
+.space-object { position: absolute; height: auto; pointer-events: none; user-select: none; }
+.space-object--large { left: 5%; top: 8%; width: 11%; }
+.space-object--small { left: 23%; top: 5%; width: 6%; }
+.space-object--sparkle { left: 20%; top: 31%; width: 5%; }
+.space-object--moon { left: 83%; top: 5%; width: 12%; }
+.space-object--saturn { left: 3%; top: 45%; width: 14%; }
+.space-object--burst { left: 75%; top: 16%; width: 5%; }
+.space-object--constellation { left: 80%; top: 42%; width: 15%; }
+.space-object--orb { left: 76%; top: 35%; width: 3%; }
+.space-object--tilted { left: 18%; top: 64%; width: 7%; }
+.space-object--bottom { left: 7%; top: 78%; width: 8%; }
+.space-object--glint { left: 37%; top: 78%; width: 5%; }
+.space-object--mini { left: 54%; top: 83%; width: 4%; }
+.space-object--shooting { left: 69%; top: 78%; width: 27%; }
 @media(max-width:700px) { .orbit-hero.mind-hero { min-height: 0; padding-block: 2rem 3rem; } .orbit-stage { margin-block: 1rem; } .orbit-hero .mind-role { width: auto; font-size: .6rem; } }

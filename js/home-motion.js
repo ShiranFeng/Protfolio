@@ -25,7 +25,6 @@
     }
   }
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const button = hero.querySelector('.orbit-pause');
   let paused = reduced.matches, hovering = false, visible = true, elapsed = 0, last = 0, frame = 0;
   const draw = () => icons.forEach((icon, index) => {
     const track = tracks[Number(icon.dataset.orbit)];
@@ -61,11 +60,8 @@
   };
   const sync = () => {
     cancelAnimationFrame(frame); frame = 0; last = 0;
-    button.textContent = paused ? 'Play orbits' : 'Pause orbits';
-    button.setAttribute('aria-pressed', String(paused));
     if (!paused && visible && !document.hidden) frame = requestAnimationFrame(tick);
   };
-  button.addEventListener('click', () => { paused = !paused; sync(); });
   reduced.addEventListener('change', () => { paused = reduced.matches; sync(); });
   document.addEventListener('visibilitychange', sync);
   new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }).observe(hero);
