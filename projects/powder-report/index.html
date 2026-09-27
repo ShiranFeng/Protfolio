@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/project-case-study.css">
+  <link rel="stylesheet" href="personas.css">
 </head>
 <body>
   <div id="navbar-placeholder" data-depth="2"></div>
@@ -19,19 +20,50 @@
     <section class="case-chapter" aria-labelledby="discover-title">
       <p class="case-stage">01 / Discover</p>
       <h2 id="discover-title">The hassles around the riding</h2>
-      <div class="case-copy"><p>Three years of snowboarding taught me one thing above all: skiing is full of small, dumb hassles that have nothing to do with skiing itself — scattered weather info, no one around to film you, losing your friends on the mountain.</p></div>
-    </section>    <section class="case-chapter" aria-labelledby="define-title">
+      <div class="case-copy">
+        <p>I love snowboarding — every day on the mountain has been worth it. What bothers me isn't the riding, it's everything around it: scattered weather info, no one to film you, losing your friends on the mountain.</p>
+        <h3>Checking it against other riders</h3>
+        <p>I interviewed two other riders to see if this was just me. It wasn't — both put carpooling near the top, since neither owns a car. But they diverged in a way that mattered: one has never skied and doesn't know where to start; the other rides often and just wants the day to run smoother.</p>
+        <h3>The other side of the booking</h3>
+        <p>If riders need guiding, filming, or teaching, someone has to be on the other end of that booking. I talked to a friend skilled enough that other riders already treat her like an instructor. Her problem is the opposite of a beginner's: no steady stream of students, demand that swings with the season, and hours lost coordinating by text instead of teaching.</p>
+      </div>
+    </section>
+    <section class="case-chapter" aria-labelledby="define-title">
       <p class="case-stage">02 / Define</p>
-      <h2 id="define-title">One framework, three kinds of help</h2>
-      <div class="case-copy"><p>Scoped around three booking types — a "ski butler" companion role (guiding, photos/video, light pointers — not formal instruction), carpooling, and formal instruction — sharing one framework: provider profile, filter by resort + date, message to confirm, pay, a day-of "find each other" moment, mutual review after.</p><h3>A companion, not a lesson</h3><p>The ski butler role is being designed for a different customer entirely — someone who doesn't want the commitment of a lesson, just wants a smooth, guided day and good photos to show for it. Selection criteria leans on experience and a sample portfolio rather than certification.</p></div>
-    </section>    <section class="case-chapter" aria-labelledby="develop-title">
+      <h2 id="define-title">Three starting points, one platform</h2>
+      <div class="case-copy">
+        <p>The beginner can't get through the door — no gear, no one to ask, unsure how to even get there. For her, footage isn't vanity, it's proof she went.</p>
+        <p>The regular rider has the habit but not the trust — she wants certification, ratings, price, and a female provider before booking a stranger, and wants someone to catch moments she'd otherwise miss.</p>
+        <p>The instructor has the skill but not the infrastructure — she wants both sides verified, clear lesson boundaries, and dependable payouts.</p>
+        <div class="persona-grid">
+          <figure>
+            <a href="assets/persona-maya.png" target="_blank" rel="noopener" aria-label="View Maya Chen persona at full size"><img src="assets/persona-maya.png" width="1536" height="1024" loading="lazy" alt="Maya Chen, the memory-making beginner: shared rides, affordable photos, clear pricing and verified identity."></a>
+            <figcaption>Fig. 1: Maya — a beginner who needs a reliable ride and a simple way to capture her first day on the mountain.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/persona-lena.png" target="_blank" rel="noopener" aria-label="View Lena Wu persona at full size"><img src="assets/persona-lena.png" width="1536" height="1024" loading="lazy" alt="Lena Wu, the friend-dependent progressor: instructor credentials, transparent prices, trusted rides and scenic photos."></a>
+            <figcaption>Fig. 2: Lena — a returning rider who values trusted providers, visible credentials and photos of the moments between runs.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/persona-alex.png" target="_blank" rel="noopener" aria-label="View Alex Rivera persona at full size"><img src="assets/persona-alex.png" width="1536" height="1024" loading="lazy" alt="Alex Rivera, the emerging instructor: dependable bookings, clear service boundaries, identity verification and timely payouts."></a>
+            <figcaption>Fig. 3: Alex — an emerging instructor who needs steady bookings, clear lesson boundaries and dependable payouts.</figcaption>
+          </figure>
+        </div>
+        <h3>One framework, three kinds of help</h3>
+        <p>Scoped around three booking types — a "ski butler" companion role (guiding, photos/video, light pointers, not formal instruction), carpooling, and formal instruction — sharing one framework: provider profile, filter by resort + date, message to confirm, pay, a day-of "find each other" moment, mutual review after.</p>
+        <h3>A companion, not a lesson</h3>
+        <p>The ski butler role targets a different customer: no interest in a lesson's commitment, just a smooth guided day and good photos. Selection leans on experience and sample portfolio, not certification.</p>
+      </div>
+    </section>
+    <section class="case-chapter" aria-labelledby="develop-title">
       <p class="case-stage">03 / Develop</p>
       <h2 id="develop-title">Starting with instructor booking</h2>
-      <div class="case-copy"><p>Built the instructor booking flow first: providers list which resorts they travel to, what they teach (snowboard/ski), whether they're certified (certified providers go through review before going live; uncertified "experienced" providers go live immediately, filtered by reviews over time)</p><p>— customers filter by riding style, skill level, and can choose to see certified-only or everyone.</p></div>
-    </section>    <section class="case-chapter" aria-labelledby="next-title">
+      <div class="case-copy"><p>Built the instructor flow first: providers list resorts, what they teach, and certification status (certified providers go through review before going live; uncertified but experienced providers go live immediately, filtered by reviews over time). Customers filter by riding style, skill level, and certified-only vs. everyone.</p></div>
+    </section>
+    <section class="case-chapter" aria-labelledby="next-title">
       <p class="case-stage">04 / Next steps · In progress</p>
       <h2 id="next-title">Connecting the rest of the day</h2>
-      <div class="case-copy"><p>Carpooling is scoped as the next module — matched by route and time rather than by picking a person, with gear space as a ski-specific detail generic carpool apps don't need.</p></div>
+      <div class="case-copy"><p>Carpooling is next — matched by route and time rather than by picking a person, with gear space as a ski-specific detail generic carpool apps don't need.</p></div>
     </section>
   </main>
   <div id="footer-placeholder" data-depth="2"></div>
