@@ -16,6 +16,8 @@
   <script src="js/home-motion.js?v=comet-8" defer></script>
   <script src="js/home-comet.js?v=11" defer></script>
   <link rel="stylesheet" href="css/home-gallery.css">
+  <link rel="stylesheet" href="css/home-about.css">
+  <script src="js/home-about.js" defer></script>
   <link rel="stylesheet" href="css/home-orbits.css?v=shared-scene-11">
   <script src="js/home-gallery.js" defer></script>
 </head>
@@ -89,11 +91,23 @@
         </div>
       </div>
     </section>
-    <section class="home-intro-section" id="about" aria-labelledby="about-title">
-      <div>
+    <section class="home-intro-section about-journey" id="about" aria-labelledby="about-title">
+      <div class="about-journey__intro">
         <h2 id="about-title">About</h2>
         <p>I'm Alex — Illustration student at OCAD, originally from Weifang. Still figuring out what happens when drawing stops staying still.</p>
       </div>
+      <div class="about-journey__map">
+        <svg class="about-journey__route" viewBox="0 0 1000 420" aria-hidden="true"><path d="M80 260 C140 300 190 305 270 285 S390 85 480 135 S670 320 730 250 S845 185 910 75"/></svg>
+        <ol class="about-journey__stops">
+          <li style="--x:8%;--y:61.9%;--delay:0s"><a href="about.html#weifang"><img src="assets/home-stars/saturn.png" alt=""><strong>Weifang</strong><span>Where my story starts.</span></a></li>
+          <li style="--x:27%;--y:67.9%;--delay:.18s"><a href="about.html#toronto"><img src="assets/home-stars/orb.png" alt=""><strong>Toronto</strong><span>A different place to see from.</span></a></li>
+          <li style="--x:48%;--y:32.1%;--delay:.36s"><a href="about.html#ocad"><img src="assets/home-stars/star-large.png" alt=""><strong>OCAD</strong><span>Learning through illustration.</span></a></li>
+          <li style="--x:73%;--y:59.5%;--delay:.54s"><a href="about.html#drawing"><img src="assets/home-stars/sparkle.png" alt=""><strong>Drawing & stories</strong><span>Ideas finding their own shape.</span></a></li>
+          <li style="--x:91%;--y:17.9%;--delay:.72s"><a href="about.html#next"><img src="assets/home-stars/moon.png" alt=""><strong>What's next?</strong><span>Seeing what drawing can become.</span></a></li>
+        </ol>
+        <img class="about-journey__astronaut" src="assets/home-astronaut/about-spaceship.png" width="1391" height="1131" alt="" aria-hidden="true">
+      </div>
+      <div class="about-journey__more"><a class="btn btn-outline-light" href="about.html">Read more ↗</a></div>
     </section>
     </div>
     <section class="home-intro-section home-gallery" id="gallery" aria-labelledby="gallery-title">
@@ -132,8 +146,13 @@
     </section>
     <section class="home-intro-section" id="work" aria-labelledby="work-title">
       <div>
-        <h2 id="work-title">Work</h2>
-        <p>A few jobs that taught me more about people than about design — running a restaurant floor, and giving a real estate team my honest opinion on their posters.</p>
+        <h2 id="work-title">Let's make something together.</h2>
+        <p>Have a project in mind, a question, or a different way of seeing things? I'd love to hear from you.</p>
+        <div class="home-contact-actions">
+          <a class="btn btn-light" href="mailto:fengalex671@gmail.com">Stay in touch ↗</a>
+          <button class="btn btn-outline-light" type="button" disabled aria-describedby="home-resume-note">Download resume ↓</button>
+        </div>
+        <small id="home-resume-note" class="home-resume-note">Resume download coming soon.</small>
       </div>
     </section>
     <section class="home-paper" aria-labelledby="legacy-work-title" hidden>

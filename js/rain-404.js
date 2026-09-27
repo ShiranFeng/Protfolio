@@ -6,7 +6,7 @@
  */
 const RAIN_ANGLE = (100 * Math.PI) / 180;
 const UMBRELLA_ANGLE = (90 * Math.PI) / 180;
-  const RAIN_COUNT = 108;
+const RAIN_COUNT = 108;
 const UMBRELLA_HALF_WIDTH = 92;
 const UMBRELLA_DEPTH = 165;
 const FLOW_STRENGTH = 108;
@@ -34,7 +34,7 @@ function init404Rain(canvas) {
         return {
             x: Math.random() * (width + 300) - 100,
             y: randomY ? Math.random() * (height + 240) - 120 : -120,
-        length: 220 + Math.random() * 160,
+            length: 220 + Math.random() * 160,
             speed: 70 + Math.random() * 25,
         };
     }
@@ -67,9 +67,12 @@ function init404Rain(canvas) {
         const downstream = dx * shelterDirection.x + dy * shelterDirection.y;
         const across = dx * tangentX + dy * tangentY;
         const acrossAbs = Math.abs(across);
+        // The pointer acts as an umbrella: rain that reaches its canopy cannot
+        // reappear anywhere in the protected strip below it.
         if (downstream >= 0 && acrossAbs < UMBRELLA_HALF_WIDTH) {
             return { x, y, masked: true };
         }
+        // Immediately above the canopy, send the rain toward the nearest edge.
         if (downstream < -UMBRELLA_DEPTH || downstream >= 0 || acrossAbs >= UMBRELLA_HALF_WIDTH + 42) {
             return { x, y, masked: false };
         }
