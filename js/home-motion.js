@@ -30,19 +30,25 @@
     const track = tracks[Number(icon.dataset.orbit)];
     // Equal angular spacing keeps the six icons from bunching up.
     const movingAngle = index * Math.PI / 3 - .35 - elapsed * track.speed;
-    const angle = icon.matches(':hover') ? (icon._hoverAngle ?? movingAngle) : movingAngle;
+    const angle = (icon.matches(':hover') || icon.classList.contains('is-tooltip-open')) ? (icon._hoverAngle ?? movingAngle) : movingAngle;
     const [x,y] = point(track, angle);
     icon.style.left = `${x / 10}%`;
     icon.style.top = `${y / 6.5}%`;
     icon.style.zIndex = Math.sin(angle) >= 0 ? '5' : '2';
   });
   icons.forEach(icon => {
-    icon.setAttribute('role', 'link');
-    icon.setAttribute('tabindex', '0');
-    icon.setAttribute('aria-label', 'Open Gallery');
-    icon.addEventListener('click', () => { window.location.href = 'gallery.html'; });
-    icon.addEventListener('keydown', event => {
-      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href = 'gallery.html'; }
+    icon.addEventListener('click', event => {
+      event.stopPropagation();
+      const opening = !icon.classList.contains('is-tooltip-open');
+      icons.forEach(item => { item.classList.remove('is-tooltip-open'); item._hoverAngle = null; item.setAttribute('aria-expanded', 'false'); });
+      if (opening) {
+        const index = icons.indexOf(icon);
+        const track = tracks[Number(icon.dataset.orbit)];
+        icon._hoverAngle = index * Math.PI / 3 - .35 - elapsed * track.speed;
+        icon.classList.add('is-tooltip-open');
+        icon.setAttribute('aria-expanded', 'true');
+        draw();
+      }
     });
     icon.addEventListener('pointerenter', () => {
       const index = icons.indexOf(icon);
@@ -51,6 +57,10 @@
       draw();
     });
     icon.addEventListener('pointerleave', () => { icon._hoverAngle = null; });
+  });
+  document.addEventListener('click', () => icons.forEach(icon => { icon.classList.remove('is-tooltip-open'); icon._hoverAngle = null; icon.setAttribute('aria-expanded', 'false'); }));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') icons.forEach(icon => { icon.classList.remove('is-tooltip-open'); icon._hoverAngle = null; icon.setAttribute('aria-expanded', 'false'); });
   });
   const tick = time => {
     frame = 0;

@@ -13600,7 +13600,7 @@ main {
 
 .site-footer {
   color: #ffffff;
-  background-color: #324a5f;
+  background: linear-gradient(180deg, #1d3447 0%, #324a5f 72%);
   font-family: "Archivo", sans-serif;
   padding-block: 4rem;
 }

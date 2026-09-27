@@ -5,18 +5,23 @@
 .orbit-stage { position: relative; isolation: isolate; width: min(100%, 1050px); aspect-ratio: 1000 / 650; margin-top: -1rem; }
 .orbit-astronaut { position: absolute; left: 50%; top: 4%; width: 47%; height: auto; transform: translateX(-50%); z-index: 3; pointer-events: auto; }
 .orbit-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
-.orbit-lines path { fill: none; stroke: #fff; stroke-width: .8; stroke-opacity: .42; vector-effect: non-scaling-stroke; }
+.orbit-lines path { fill: none; stroke: #fff; stroke-width: .8; stroke-opacity: .26; vector-effect: non-scaling-stroke; }
 .orbit-lines--back { z-index: 1; }
 .orbit-lines--front { z-index: 4; }
-.orbit-icon { position: absolute; width: 12%; height: 18%; object-fit: contain; transform: translate(-50%, -50%); filter: drop-shadow(0 5px 7px #0005); cursor: pointer; pointer-events: auto; transition: filter .2s ease, scale .2s ease; }
-.orbit-icon:hover, .orbit-icon:focus-visible { scale: 1.04; filter: drop-shadow(0 6px 8px #0006); outline: none; }
+.orbit-icon { position: absolute; width: 9.5%; height: 14%; padding: 0; border: 0; background: none; transform: translate(-50%, -50%); filter: saturate(.62) brightness(.9) drop-shadow(0 5px 7px #0004); cursor: pointer; pointer-events: auto; transition: filter .2s ease, scale .2s ease; }
+.orbit-icon > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.orbit-icon:hover, .orbit-icon:focus-visible, .orbit-icon.is-tooltip-open { z-index: 30 !important; scale: 1.04; filter: saturate(.75) brightness(.96) drop-shadow(0 6px 8px #0005); outline: none; }
+.orbit-tooltip { position: absolute; left: 50%; top: calc(100% + .55rem); z-index: 20; width: min(14rem, 40vw); padding: .7rem .8rem; border: 1px solid #d7efff69; border-radius: .75rem; color: #f8fcff; background: #102535e8; box-shadow: 0 12px 24px #0006, inset 0 1px 0 #fff4; font-family: Archivo, sans-serif; font-size: clamp(.65rem, 1vw, .78rem); font-weight: 400; line-height: 1.4; text-align: left; transform: translate(-50%, -4px); opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
+.orbit-tooltip strong { display: block; margin-bottom: .2rem; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+@media (pointer: fine) { .orbit-icon:hover .orbit-tooltip, .orbit-icon:focus-visible .orbit-tooltip { opacity: 1; transform: translate(-50%, 0); } }
+@media (pointer: coarse) { .orbit-icon.is-tooltip-open .orbit-tooltip { opacity: 1; transform: translate(-50%, 0); } }
 .orbit-pause { color: inherit; background: transparent; border: 1px solid #ffffff60; border-radius: 2rem; padding: .5rem 1rem; font-size: .75rem; }
 .home-space-scene { position: relative; isolation: isolate; background: var(--bs-secondary); }
 .home-space-scene .orbit-hero { overflow: visible; background: transparent; z-index: 1; }
 .home-space-scene #about { background: transparent; }
 .home-space-scene #about > div { position: relative; z-index: 2; }
 .star-stage { width: 100%; aspect-ratio: 1440 / 780; min-height: min(78vw, 819px); margin-top: 1rem; }
-.orbit-system { position: absolute; left: 50%; top: 0; width: min(100%, 1050px); aspect-ratio: 1000 / 650; transform: translateX(-50%); isolation: isolate; }
+.orbit-system { position: absolute; left: 50%; top: 0; z-index: 10; width: min(100%, 1050px); aspect-ratio: 1000 / 650; transform: translateX(-50%); isolation: isolate; }
 .star-stage .orbit-astronaut { width: 47%; top: 4%; animation: astronaut-float 6s ease-in-out infinite; }
 @keyframes astronaut-float {
   0%, 100% { transform: translate(-50%, 0); }
@@ -25,7 +30,7 @@
 @media (prefers-reduced-motion: reduce) {
   .star-stage .orbit-astronaut { animation: none; }
 }
-.space-object { position: absolute; height: auto; pointer-events: none; user-select: none; }
+.space-object { position: absolute; z-index: 1; height: auto; pointer-events: none; user-select: none; transform: scale(.78); transform-origin: center; filter: saturate(.6) brightness(.9); }
 .space-object--large { left: 5%; top: 8%; width: 11%; }
 .space-object--small { left: 23%; top: 5%; width: 6%; }
 .space-object--sparkle { left: 20%; top: 31%; width: 5%; }

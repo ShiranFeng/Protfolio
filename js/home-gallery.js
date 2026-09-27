@@ -11,7 +11,7 @@
   let offset = 0, last = 0, frame = 0, startX = 0, moved = false;
   let width = arc.clientWidth;
   let cardWidth = cards[0].offsetWidth;
-  const spacing = () => cardWidth * .8;
+  const spacing = () => cardWidth * 1.16;
   const draw = () => {
     const step = spacing();
     const length = cards.length * step;

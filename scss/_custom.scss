@@ -171,7 +171,7 @@ main {
 
 .site-footer {
   color: $brand-on-dark;
-  background-color: $brand-dark;
+  background: linear-gradient(180deg, #1d3447 0%, $brand-dark 72%);
   font-family: $font-family-sans-serif;
   padding-block: 4rem;
 

@@ -109,5 +109,10 @@
 
 .home-intro-section{display:grid;min-height:clamp(26rem,55svh,42rem);place-items:center;padding:4rem 1.5rem;background:var(--bs-secondary);color:var(--brand-on-dark,#fff);text-align:center}.home-intro-section+ .home-intro-section{border-top:1px solid rgba(255,255,255,.28)}.home-intro-section>div{max-width:42rem}.home-intro-section h2{margin:0 0 1rem;font-size:clamp(1.5rem,2.5vw,2.25rem);line-height:1.1}.home-intro-section p{margin:0;font-size:clamp(1rem,1.4vw,1.2rem);line-height:1.7}
 
+.motion-home #work { background: linear-gradient(180deg, var(--bs-secondary) 0%, #1d3447 100%); }
+.motion-home .site-footer { background: linear-gradient(180deg, #1d3447 0%, #324a5f 72%); }
+
+@media (min-width: 761px) { .home-page { scroll-snap-type: y proximity; } .home-page #about, .home-page #gallery, .home-page #projects, .home-page #work { min-height: 100svh; scroll-snap-align: start; } .home-page #work h2 { font-size: clamp(2.6rem, 5vw, 4.75rem); letter-spacing: -.03em; } .home-page #work > div { max-width: 46rem; } }
+
 /* Keep both halves of the portrait in frame after the paper tears open. */
 .mind-hero{overflow:visible}.mind-hero.is-open .mind-cap{transform:translate(12%,-10%) rotate(-8deg) rotateY(-10deg);opacity:1}.mind-hero.is-open .mind-cap__back{opacity:0}

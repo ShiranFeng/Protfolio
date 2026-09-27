@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="home-page">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,9 @@
   <script src="js/home-comet.js?v=11" defer></script>
   <link rel="stylesheet" href="css/home-gallery.css">
   <link rel="stylesheet" href="css/home-about.css">
+  <link rel="stylesheet" href="css/home-projects.css">
   <script src="js/home-about.js" defer></script>
+  <script src="js/home-projects.js" defer></script>
   <link rel="stylesheet" href="css/home-orbits.css?v=shared-scene-11">
   <script src="js/home-gallery.js" defer></script>
 </head>
@@ -38,17 +40,17 @@
     <section class="mind-hero orbit-hero" id="torn-paper-mind" aria-labelledby="hero-title">
       <h1 class="mind-name" id="hero-title">Shiran Alex</h1>
       <p class="mind-role">Illustration. Stories. A little imagination.</p>
-      <div class="orbit-stage star-stage" role="img" aria-label="Alex floating among golden stars, a moon and a planet, with a shooting star at the lower right">
+      <div class="orbit-stage star-stage" role="region" aria-label="Orbiting parts of Alex's story">
         <div class="orbit-system">
         <svg class="orbit-lines orbit-lines--back" viewBox="0 0 1000 650" aria-hidden="true"></svg>
         <img class="orbit-astronaut" src="assets/home-astronaut/gaze-center.png" alt="" width="1292" height="1218" data-gaze="center">
         <svg class="orbit-lines orbit-lines--front" viewBox="0 0 1000 650" aria-hidden="true"></svg>
-        <img class="orbit-icon" src="assets/home-icons/drink.png" alt="" data-orbit="0" data-phase="0">
-        <img class="orbit-icon" src="assets/home-icons/palette.png" alt="" data-orbit="1" data-phase="1">
-        <img class="orbit-icon" src="assets/home-icons/snowboard.png" alt="" data-orbit="2" data-phase="2">
-        <img class="orbit-icon" src="assets/home-icons/ocad.png" alt="" data-orbit="0" data-phase="3.14">
-        <img class="orbit-icon" src="assets/home-icons/dog.png" alt="" data-orbit="1" data-phase="4.14">
-        <img class="orbit-icon" src="assets/home-icons/hotpot.png" alt="" data-orbit="2" data-phase="5.14">
+        <button class="orbit-icon" type="button" data-orbit="0" aria-describedby="orbit-coffee-note" aria-expanded="false"><img src="assets/home-icons/drink.png" alt=""><span class="orbit-tooltip" id="orbit-coffee-note"><strong>Property work</strong>My previous role in property management.</span></button>
+        <button class="orbit-icon" type="button" data-orbit="1" aria-describedby="orbit-palette-note" aria-expanded="false"><img src="assets/home-icons/palette.png" alt=""><span class="orbit-tooltip" id="orbit-palette-note"><strong>Illustration</strong>My everyday study, my profession, and what I do for fun.</span></button>
+        <button class="orbit-icon" type="button" data-orbit="2" aria-describedby="orbit-snowboard-note" aria-expanded="false"><img src="assets/home-icons/snowboard.png" alt=""><span class="orbit-tooltip" id="orbit-snowboard-note"><strong>Snowboarding</strong>One of the ways I love to spend a day outside.</span></button>
+        <button class="orbit-icon" type="button" data-orbit="0" aria-describedby="orbit-ocad-note" aria-expanded="false"><img src="assets/home-icons/ocad.png" alt=""><span class="orbit-tooltip" id="orbit-ocad-note"><strong>OCAD University</strong>The school that has shaped my illustration practice.</span></button>
+        <button class="orbit-icon" type="button" data-orbit="1" aria-describedby="orbit-dog-note" aria-expanded="false"><img src="assets/home-icons/dog.png" alt=""><span class="orbit-tooltip" id="orbit-dog-note"><strong>Mi Gao</strong>My dog, and a very important member of my family.</span></button>
+        <button class="orbit-icon" type="button" data-orbit="2" aria-describedby="orbit-hotpot-note" aria-expanded="false"><img src="assets/home-icons/hotpot.png" alt=""><span class="orbit-tooltip" id="orbit-hotpot-note"><strong>Hot pot</strong>Working at a hot-pot restaurant was a thread through my school years.</span></button>
         </div>
         <img class="space-object space-object--large" src="assets/home-stars/star-large.png" alt="" draggable="false">
         <img class="space-object space-object--small" src="assets/home-stars/star-small.png" alt="" draggable="false">
@@ -138,11 +140,34 @@
         <a href="gallery.html">Explore Gallery ↗</a>
       </div>
     </section>
-    <section class="home-intro-section" id="projects" aria-labelledby="projects-title">
-      <div>
-        <h2 id="projects-title">Projects</h2>
-        <p>Three projects, three real audiences: a city nobody's heard of, a client who needed something a five-year-old could love, and my own worst ski days.</p>
+    <section class="home-intro-section home-projects" id="projects" aria-labelledby="projects-title">
+      <div class="home-projects__inner">
+        <div class="home-projects__intro">
+          <p class="home-projects__eyebrow">Selected work</p>
+          <h2 id="projects-title">Projects</h2>
+          <p>Three projects, three real audiences: a city nobody's heard of, a client who needed something a five-year-old could love, and my own worst ski days.</p>
+        </div>
+        <div class="home-projects__grid">
+          <a class="project-glass-card project-glass-card--baguio" href="projects/baguio/index.html" aria-label="Read the Baguio travel poster case study">
+            <img src="projects/baguio/assets/final-poster.png" alt="Colourful Baguio travel poster" loading="lazy">
+            <span class="project-glass-card__shine" aria-hidden="true"></span>
+            <span class="project-glass-card__content"><span class="project-glass-card__number">01</span><span class="project-glass-card__copy"><strong>Baguio</strong><small>Illustration · Poster</small></span><span class="project-glass-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="project-glass-card project-glass-card--pin" href="projects/pin-it-down/index.html" aria-label="Read the Pin It Down case study">
+            <img src="projects/pin-it-down/assets/final-magnet-mockup.png" alt="Panda and gourd fridge magnet mockup" loading="lazy">
+            <span class="project-glass-card__shine" aria-hidden="true"></span>
+            <span class="project-glass-card__content"><span class="project-glass-card__number">02</span><span class="project-glass-card__copy"><strong>Pin It Down</strong><small>Product Design · Toy / Gift</small></span><span class="project-glass-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <a class="project-glass-card project-glass-card--slope" href="projects/powder-report/index.html" aria-label="Read the SlopeSide case study">
+            <img src="projects/powder-report/assets/mountain-memory.jpg" alt="Snowy mountain landscape" loading="lazy">
+            <span class="project-glass-card__shine" aria-hidden="true"></span>
+            <span class="project-glass-card__content"><span class="project-glass-card__number">03</span><span class="project-glass-card__copy"><strong>SlopeSide</strong><small>Brand · Experience</small></span><span class="project-glass-card__arrow" aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+        <a class="home-projects__all" href="projects/index.html">View all projects <span aria-hidden="true">↗</span></a>
       </div>
+      <img class="home-projects__star home-projects__star--left" src="assets/home-stars/star-tilted.png" alt="" aria-hidden="true">
+      <img class="home-projects__star home-projects__star--right" src="assets/home-stars/sparkle-bottom.png" alt="" aria-hidden="true">
     </section>
     <section class="home-intro-section" id="work" aria-labelledby="work-title">
       <div>
