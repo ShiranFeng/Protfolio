@@ -1,0 +1,26 @@
+html body { background: #fdfdfb; color: #26323b; }
+body header { padding: 24px; background: #fdfdfb; }
+body h1 { font-size: 22px; }
+body .tabs { flex-wrap: wrap; margin-top: 18px; }
+body .pane { padding: 24px; }
+body .intro { font-size: 14px; line-height: 1.65; }
+body .flow { flex-wrap: nowrap; gap: 0; overflow-x: auto; padding: 8px 8px 24px; align-items: flex-start; justify-content: flex-start; overscroll-behavior-x: contain; }
+body .step { flex: 0 0 264px; }
+body .step:not(:last-child)::after { display: none; }
+body .label { min-height: 52px; height: auto; padding-bottom: 12px; }
+body .phone { height: auto; min-height: 510px; overflow: visible; }
+body .screen { height: auto; min-height: 443px; }
+.flow-connector { flex: 0 0 170px; align-self: flex-start; margin-top: 215px; padding: 0 18px; text-align: center; }
+.flow-connector span { display: block; font-size: 12px; line-height: 1.6; margin-bottom: 14px; color: #56626a; }
+.flow-connector i { display: block; height: 1px; background: #89959b; position: relative; }
+.flow-connector i::after { content: ''; position: absolute; right: 0; top: -4px; width: 8px; height: 8px; border-top: 1px solid #89959b; border-right: 1px solid #89959b; transform: rotate(45deg); }
+.flow-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.flow-tools p { flex: 1; font-size: 12px; color: #56626a; margin: 0; }
+.flow-tools button { padding: 8px 14px; border: 1px solid #b8bfc0; border-radius: 5px; background: white; cursor: pointer; }
+.module-branches { margin-top: 32px; border-top: 1px solid #ccd0ce; padding-top: 24px; }
+.module-branches h2 { font-size: 18px; }
+.module-branches > p { font-size: 13px; line-height: 1.65; max-width: 65ch; }
+.module-lane { display: flex; gap: 32px; overflow-x: auto; padding: 12px 8px 24px; align-items: flex-start; }
+.module-path { display: block; margin: 0 0 18px; font-size: 12px; line-height: 1.6; color: #56626a; }
+body .endnote { font-size: 12px; background: #fff; }
+@media (prefers-reduced-motion: no-preference) { body .flow { scroll-behavior: smooth; } }

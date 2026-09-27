@@ -1,4 +1,5 @@
 .persona-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-block: 1.5rem 2rem; }
+.low-fi-embed { display: block; width: 100%; height: 960px; border: 1px solid #d4d6d1; border-radius: 12px; background: #fdfdfb; }
 .ski-discovery { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 2rem; align-items: start; margin-block: 1.5rem 2rem; }
 .case-study .ski-discovery__copy p { font-size: 1rem; line-height: 1.65; }
 .ski-discovery__copy p:last-child { margin-bottom: 0; }
