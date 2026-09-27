@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | Shiran Alex</title>
+  <link rel="stylesheet" href="css/home-loader.css">
+  <script src="js/home-loader.js"></script>
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +20,14 @@
   <script src="js/home-gallery.js" defer></script>
 </head>
 <body class="motion-home">
+  <div class="home-loader" role="status" aria-live="polite" aria-label="Loading homepage">
+    <span class="home-loader__star" aria-hidden="true">✦</span>
+    <p>Getting ready for liftoff</p>
+    <strong class="home-loader__number">0%</strong>
+    <progress class="home-loader__progress" max="100" value="0" aria-label="Homepage loading progress"></progress>
+    <p class="home-loader__message">Loading images and fonts</p>
+    <div class="home-loader__actions" hidden><button type="button" data-load-retry>Try again</button><button type="button" data-load-continue>Continue anyway</button></div>
+  </div>
   <a class="draft-skip" href="#main">Skip to content</a>
 
   <div id="navbar-placeholder" data-depth="0"></div>

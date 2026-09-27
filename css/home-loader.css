@@ -1,0 +1,11 @@
+.home-loader { display: none; }
+html.home-loading { overflow: hidden; }
+.home-loading body > :not(.home-loader) { visibility: hidden; }
+.home-loading body { animation: none !important; }
+.home-loading .home-loader { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; background: #0b1923; color: #fff9e9; font-family: Arial, sans-serif; text-align: center; padding: 2rem; }
+.home-loader p { margin: 0; }
+.home-loader__star { font-size: 4rem; color: #ffd451; }
+.home-loader__number { font-size: clamp(3rem, 9vw, 6rem); font-weight: 400; font-variant-numeric: tabular-nums; }
+.home-loader__progress { width: min(18rem, 75vw); height: 4px; accent-color: #ffd451; }
+.home-loader__message { font-size: .8rem; opacity: .7; max-width: 24rem; }
+.home-loader__actions button { border: 1px solid #fff6; border-radius: 2rem; padding: .6rem 1rem; margin: .25rem; background: transparent; color: inherit; cursor: pointer; }
