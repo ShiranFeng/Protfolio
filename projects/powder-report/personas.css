@@ -1,9 +1,4 @@
 .persona-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-block: 1.5rem 2rem; }
-.persona-card { min-height: 15rem; margin: 0; padding: 1.25rem; border: 1px solid rgba(12, 24, 33, .2); border-radius: .75rem; background: #fbfaf6; }
-.persona-card__number { margin: 0 0 2.25rem; color: #e85c35; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
-.persona-card h3 { margin: 0; font-size: 1.3rem; }
-.persona-card__role { margin: .15rem 0 1.5rem; color: rgba(12, 24, 33, .7); font-size: .9rem; }
-.persona-card > p:last-child { margin: 0; line-height: 1.55; }
 .slopeside-intro { display: block; }
 .slopeside-intro__copy .case-stage { margin-bottom: 1rem; }
 .slopeside-intro__copy h1 { margin-top: 0; }
@@ -25,6 +20,11 @@
 .ski-memories a { display: block; cursor: zoom-in; }
 .ski-memories img { display: block; width: 100%; height: auto; }
 .ski-memories figcaption { margin-top: .5rem; color: rgba(12, 24, 33, .72); font-size: .875rem; font-style: italic; line-height: 1.5; }
+.persona-grid figure { margin: 0; }
+.persona-grid a { display: block; cursor: zoom-in; }
+.persona-grid a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.persona-grid img { display: block; width: 100%; height: auto; }
+.persona-grid figcaption { margin-top: .5rem; color: rgba(12, 24, 33, .72); font-size: .875rem; font-style: italic; line-height: 1.5; }
 .hifi-gallery { margin-top: 2rem; }
 .hifi-gallery figure { min-width: 0; margin: 0; overflow: hidden; border-radius: .9rem; background: #f4f2ed; }
 .hifi-gallery img { display: block; width: 100%; height: 19rem; object-fit: cover; object-position: center; transition: transform .3s ease; }
@@ -35,7 +35,7 @@
   .ski-discovery { grid-template-columns: 1fr; gap: 1rem; }
   .slopeside-services > div { grid-template-columns: 1fr; gap: .35rem; }
   .persona-grid { grid-template-columns: 1fr; }
-  .persona-card { min-height: 0; }
-  .persona-card__number { margin-bottom: 1.25rem; }
+  .persona-grid figure { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .75rem; align-items: start; }
+  .persona-grid figcaption { margin-top: 0; }
   .hifi-gallery img { height: 14rem; }
 }
