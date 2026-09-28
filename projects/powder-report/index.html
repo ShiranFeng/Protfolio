@@ -15,76 +15,111 @@
 <body>
   <div id="navbar-placeholder" data-depth="2"></div>
   <main class="container project-detail case-study">
-    <header class="case-intro"><h1>SlopeSide — A Concierge for People Who Just Want to Have Fun</h1>
-      <p>This project imagines a concierge platform that pairs riders with locals who'll show them around, take their photos, and drive them there — no lesson required, no commitment, just someone who's done this a hundred times taking the hassle off your hands.</p></header>
-    <section class="case-chapter" aria-labelledby="discover-title">
-      <p class="case-stage">01 / Discover</p>
-      <h2 id="discover-title">The hassles around the riding</h2>
+    <header class="case-intro slopeside-intro">
+      <div class="slopeside-intro__copy">
+        <p class="case-stage">Case study · Brand &amp; experience design</p>
+        <h1>SlopeSide — A Little Less Planning, A Lot More Mountain</h1>
+      </div>
+      <figure class="slopeside-intro__visual"><img src="assets/slopeside-promo.png" width="1374" height="1145" alt="SlopeSide campaign visual: a ski glove holds a phone showing the SlopeSide app"></figure>
+    </header>
+
+    <section class="case-chapter" aria-labelledby="context-title">
+      <p class="case-stage">01 / Context</p>
+      <h2 id="context-title">A little less planning, a lot more mountain</h2>
       <div class="case-copy">
-        <div class="ski-discovery">
-        <div class="ski-discovery__copy">
-          <p>I love snowboarding. It's the rides, weather checks and keeping friends together that make each trip harder.</p>
-          <p>My camera roll is mostly scenery and quick snapshots. I still barely have a riding photo I love — finding someone to take one is another thing to organise.</p>
-        </div>
+        <p>I love snowboarding, but getting to the good part takes work: checking the weather, finding a ride, gathering friends, and deciding where to meet. I come home with plenty of mountain photos, but hardly any of myself riding.</p>
+        <p>I wondered what the day might feel like with someone who knows the mountain helping it run more smoothly.</p>
         <div class="ski-memories">
-          <figure>
-            <a href="assets/between-runs.jpg" target="_blank" rel="noopener" aria-label="View snapshot between runs"><img src="assets/between-runs.jpg" width="900" height="1200" loading="lazy" alt="A snapshot from a seated snowboarder's viewpoint, with other riders on the snow and mountains in the distance."></a>
-            <figcaption>A break between runs, caught on my phone.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/mountain-memory.jpg" target="_blank" rel="noopener" aria-label="View mountain photograph"><img src="assets/mountain-memory.jpg" width="900" height="1200" loading="lazy" alt="A snowy mountainside and evergreen trees under a cloudy blue sky."></a>
-            <figcaption>The view I captured; the riding I didn't.</figcaption>
-          </figure>
+          <figure><a href="assets/between-runs.jpg" target="_blank" rel="noopener"><img src="assets/between-runs.jpg" width="900" height="1200" loading="lazy" alt="A seated snowboarder's view of the mountain between runs"></a><figcaption>A break between runs, caught on my phone.</figcaption></figure>
+          <figure><a href="assets/mountain-memory.jpg" target="_blank" rel="noopener"><img src="assets/mountain-memory.jpg" width="900" height="1200" loading="lazy" alt="Snowy mountain landscape and evergreen trees"></a><figcaption>The view I captured; the riding I didn't.</figcaption></figure>
         </div>
-        </div>
-        <h3>Checking it against other riders</h3>
-        <p>I interviewed two other riders to see if this was just me. It wasn't — both put carpooling near the top, since neither owns a car. But they diverged in a way that mattered: one has never skied and doesn't know where to start; the other rides often and just wants the day to run smoother.</p>
-        <h3>The other side of the booking</h3>
-        <p>If riders need guiding, filming, or teaching, someone has to be on the other end of that booking. I talked to a friend skilled enough that other riders already treat her like an instructor. Her problem is the opposite of a beginner's: no steady stream of students, demand that swings with the season, and hours lost coordinating by text instead of teaching.</p>
       </div>
     </section>
-    <section class="case-chapter" aria-labelledby="define-title">
-      <p class="case-stage">02 / Define</p>
-      <h2 id="define-title">Three starting points, one platform</h2>
+
+    <section class="case-chapter" aria-labelledby="question-title">
+      <p class="case-stage">02 / Question</p>
+      <h2 id="question-title">What kind of help does a rider want?</h2>
       <div class="case-copy">
-        <p>The beginner can't get through the door — no gear, no one to ask, unsure how to even get there. For her, footage isn't vanity, it's proof she went.</p>
-        <p>The regular rider has the habit but not the trust — she wants certification, ratings, price, and a female provider before booking a stranger, and wants someone to catch moments she'd otherwise miss.</p>
-        <p>The instructor has the skill but not the infrastructure — she wants both sides verified, clear lesson boundaries, and dependable payouts.</p>
-        <div class="persona-grid">
-          <figure>
-            <a href="assets/persona-maya.png" target="_blank" rel="noopener" aria-label="View Maya Chen persona at full size"><img src="assets/persona-maya.png" width="1536" height="1024" loading="lazy" alt="Maya Chen, the memory-making beginner: shared rides, affordable photos, clear pricing and verified identity."></a>
-            <figcaption>Fig. 1: Maya — a beginner who needs a reliable ride and a simple way to capture her first day on the mountain.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/persona-lena.png" target="_blank" rel="noopener" aria-label="View Lena Wu persona at full size"><img src="assets/persona-lena.png" width="1536" height="1024" loading="lazy" alt="Lena Wu, the friend-dependent progressor: instructor credentials, transparent prices, trusted rides and scenic photos."></a>
-            <figcaption>Fig. 2: Lena — a returning rider who values trusted providers, visible credentials and photos of the moments between runs.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/persona-alex.png" target="_blank" rel="noopener" aria-label="View Alex Rivera persona at full size"><img src="assets/persona-alex.png" width="1536" height="1024" loading="lazy" alt="Alex Rivera, the emerging instructor: dependable bookings, clear service boundaries, identity verification and timely payouts."></a>
-            <figcaption>Fig. 3: Alex — an emerging instructor who needs steady bookings, clear lesson boundaries and dependable payouts.</figcaption>
-          </figure>
-        </div>
-        <h3>One framework, three kinds of help</h3>
-        <p>Scoped around three booking types — a "ski butler" companion role (guiding, photos/video, light pointers, not formal instruction), carpooling, and formal instruction — sharing one framework: provider profile, filter by resort + date, message to confirm, pay, a day-of "find each other" moment, mutual review after.</p>
-        <h3>A companion, not a lesson</h3>
-        <p>The ski butler role targets a different customer: no interest in a lesson's commitment, just a smooth guided day and good photos. Selection leans on experience and sample portfolio, not certification.</p>
+        <p>A first-timer may need help getting started. A regular rider may only want someone to show them around and take a few photos.</p>
+        <p><strong>How might riders find the help they want for the day, while knowing what a provider offers and what it costs?</strong></p>
       </div>
     </section>
-    <section class="case-chapter" aria-labelledby="develop-title">
-      <p class="case-stage">03 / Develop</p>
-      <h2 id="develop-title">Starting with instructor booking</h2>
-      <div class="case-copy"><p>Built the instructor flow first: providers list resorts, what they teach, and certification status (certified providers go through review before going live; uncertified but experienced providers go live immediately, filtered by reviews over time). Customers filter by riding style, skill level, and certified-only vs. everyone.</p></div>
+
+    <section class="case-chapter" aria-labelledby="research-title">
+      <p class="case-stage">03 / Research &amp; early exploration</p>
+      <h2 id="research-title">Looking beyond my own priorities</h2>
+      <div class="case-copy">
+        <p>I knew how to start an illustration, but not an app. I used AI to learn the basic UX process, then asked riders about an idea I had packed with guiding, rides, lessons, and photos. I thought photos would matter most. Instead, three of five friends brought up transport and planning; others wanted to see credentials, reviews, and prices. I began separating the services around what people actually needed.</p>
+      </div>
     </section>
-    <section class="case-chapter" aria-labelledby="flow-title">
-      <h2 id="flow-title">Mapping both sides of the booking</h2>
-      <div class="case-copy"><p>These low-fidelity screens map the customer journey from finding a Ski Butler to reviewing the day, alongside the provider setup flow. The arrows explain each transition; provider profile modules branch from a shared checklist and can be completed in any order.</p></div>
+
+    <section class="case-chapter" aria-labelledby="personas-title">
+      <p class="case-stage">04 / Personas</p>
+      <h2 id="personas-title">Three different starting points</h2>
+      <div class="case-copy">
+        <p>Those conversations helped me see three different starting points:</p>
+        <div class="persona-grid">
+          <article class="persona-card"><p class="persona-card__number">01</p><h3>Maya</h3><p class="persona-card__role">The first-time rider</p><p>Needs an affordable way to get there, get started, and remember her first day.</p></article>
+          <article class="persona-card"><p class="persona-card__number">02</p><h3>Lena</h3><p class="persona-card__role">The returning rider</p><p>Wants a provider she can trust, clear pricing, and photos she cannot take herself.</p></article>
+          <article class="persona-card"><p class="persona-card__number">03</p><h3>Alex</h3><p class="persona-card__role">The emerging instructor</p><p>Wants steady bookings and clear boundaries around what they offer.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-chapter" aria-labelledby="reframing-title">
+      <p class="case-stage">05 / Reframing</p>
+      <h2 id="reframing-title">Three services, not one big promise</h2>
+      <div class="case-copy">
+        <p>One booking could not answer all three needs. I divided the idea into services people could understand at a glance:</p>
+        <div class="slopeside-services" role="region" aria-label="SlopeSide services">
+          <div><strong>Service</strong><strong>What people book</strong></div>
+          <div><span>Ski Butler</span><span>A local companion for guiding, with optional photos or light riding pointers</span></div>
+          <div><span>Carpooling</span><span>A shared ride matched by route and time, with space for gear</span></div>
+          <div><span>Instruction</span><span>A formal lesson with a clear teaching scope and certification status</span></div>
+        </div>
+        <p>I focused on Ski Butler first: a smoother day on the mountain, without committing to a lesson.</p>
+      </div>
+    </section>
+
+    <section class="case-chapter" aria-labelledby="lowfi-title">
+      <p class="case-stage">06 / Low-fi</p>
+      <h2 id="lowfi-title">Mapping the booking from both sides</h2>
+      <div class="case-copy">
+        <p>I mapped the booking from both sides. Riders choose their riding style, resort, date, and provider, then confirm services and pay a deposit. Providers set up their profiles by service and manage each one separately.</p>
+        <p>The wireframes helped me settle details that had been vague on paper, including separate choices for coaching and photos, and distinct states for certified and self-declared experience. I showed the flow to friends; they could follow the booking and tell what each service included. Then I moved into high fidelity.</p>
+      </div>
       <p><a href="low-fi.html" target="_blank" rel="noopener">Open the full-size flow canvas ↗</a></p>
       <iframe class="low-fi-embed" src="low-fi.html" title="SlopeSide low-fidelity customer and provider flows" loading="lazy"></iframe>
     </section>
-    <section class="case-chapter" aria-labelledby="next-title">
-      <p class="case-stage">04 / Next steps · In progress</p>
-      <h2 id="next-title">Connecting the rest of the day</h2>
-      <div class="case-copy"><p>Carpooling is next — matched by route and time rather than by picking a person, with gear space as a ski-specific detail generic carpool apps don't need.</p></div>
+
+    <section class="case-chapter" aria-labelledby="visual-title">
+      <p class="case-stage">07 / Prototype &amp; visual direction</p>
+      <h2 id="visual-title">A mountain built from small marks</h2>
+      <div class="case-copy">
+        <p>I wanted the first screen to feel like the anticipation of powder snow. Inspired by Seurat and Pointillism, I used small dots to build the ridgelines and slopes. Up close, they feel like loose snow; from a distance, they become a mountain. Blue brings in the cold, open air. Orange lands like a patch of sunlight, warming the scene and drawing the eye. <a href="https://www.metmuseum.org/fr/essays/georges-seurat-1859-1891-and-neo-impressionism?utm_source=chatgpt.com" target="_blank" rel="noopener">Met Museum reference ↗</a></p>
+      </div>
+      <figure class="pointillism-reference"><img src="assets/pointillism-reference.png" width="2638" height="1254" loading="lazy" alt="Pointillist landscape design reference"><figcaption>Pointillism reference for the high-fidelity visual direction.</figcaption></figure>
+    </section>
+
+    <section class="case-chapter" aria-labelledby="design-title">
+      <p class="case-stage">08 / Current design</p>
+      <h2 id="design-title">Practical choices, when riders need them</h2>
+      <div class="case-copy">
+        <p>The mountain creates the first impression; the choices appear when riders need them. They select snowboard or ski, resort and date, then compare providers by experience, reviews, price, and services. On a provider’s page, they can add coaching or photo and video coverage.</p>
+        <p>After booking, the experience follows the day: deposit, meetup contact, final payment and tip, then a review. Providers can edit, pause, or switch off each service individually. The high-fidelity flow is still in progress and has not yet completed usability testing.</p>
+      </div>
+      <div class="hifi-gallery" aria-label="SlopeSide high-fidelity screens">
+        <figure class="hifi-gallery__hero"><img src="assets/hifi-flow-overview.png" width="1586" height="992" loading="lazy" alt="SlopeSide high-fidelity flow overview showing rider discovery, booking, day-of coordination, and provider service management"><figcaption>High-fidelity flow overview: discovery, booking, the mountain day, and provider tools.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-chapter" aria-labelledby="reflection-title">
+      <p class="case-stage">09 / Reflection</p>
+      <h2 id="reflection-title">Keeping visual curiosity useful</h2>
+      <div class="case-copy">
+        <p>In illustration, I can follow a colour or composition because it feels promising. In an app, I have to ask what each choice helps someone do. That has made me more deliberate about where visual expression belongs.</p>
+        <p>Next, I want to refine the interactions, test them with more riders and providers, and try SlopeSide with a small group on a real mountain.</p>
+      </div>
     </section>
   </main>
   <div id="footer-placeholder" data-depth="2"></div>
